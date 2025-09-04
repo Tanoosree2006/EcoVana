@@ -30,7 +30,7 @@ html, body{
     margin: 12px;
 }
 .header_navLinks a:hover{
-    background-color: #5C4033;
+    background-color: #5c4033;
     color: white;
     border-radius:10px;
 }
@@ -44,7 +44,7 @@ html, body{
     top: 75%; 
     left: 40%;
     transform: translateX(-50%);
-    background-color: white;
+    background-color: #CDEAC0;
     border-radius: 5px;
     padding: 5px 10px;
     white-space: nowrap;
@@ -86,7 +86,7 @@ html, body{
     cursor: pointer; 
 }
 .submenu a{
-    padding-left: 10px;
+    padding-left: 4px;
     color: black;
 }
 .submenu:hover{

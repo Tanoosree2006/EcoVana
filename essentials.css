@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: white;
+    height: 100svh;
+}
+
+
+.title {
+    /* background: #dcedc8; */
+    color: rgb(132, 63, 14);
+    font-family: 'Pacifico', cursive;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.title h2 , .text h2{
+    animation: breathe 3s infinite ease-in-out;
+}
+
+@keyframes breathe {
+    0%{ 
+        transform: scale(1); 
+    }
+    50%{
+        transform: scale(1.03);
+    }
+}
+
+.sections {
+    padding: 0px 100px 100px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.block:hover {
+    transform: translateY(-5px);
+}
+
+.text {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text h2 {
+    margin-top: 0;
+    color: rgb(132, 63, 14);
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hover-text {
+    color: rgb(158, 37, 37);
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    width: auto-fit;
+    margin-top: 50px;
+    margin-left: 30px;
+    /* display: none; */
+    text-decoration: none;
+    text-align: center;
+}
+
+/* .block:hover .hover-text {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+} */
+
+.image {
+    max-width: 400px;
+    height: 200px;
+}
+
+.image img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    height: 200px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 18px;
+    }
+
+    .sections{
+        padding: 10px;
+    }
+
+    .block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .image {
+        align-self: center;
+        margin-top: 10px;
+        order: 1;
+    }
+
+    .text {
+        width: 100%;
+        order: 2;
+        color: white;
+    }
+
+    .hover-text {
+        margin-top: 10px;
+    }
+
+    .leaf {
+        width: 30%;
+        height: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    .block {
+        background-image: none;
+    }
+    .image img{
+        width:290px;
+    }
+}

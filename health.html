@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="HeaderStyles.css"/>
+    <link rel="stylesheet" href="FooterStyles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html,body{
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+     <div class="header">
+            <div class="header_logo">
+                <img src="./logo.png" alt="logo">
+            </div>
+            <div class="header_navLinks">
+                <a href="#">Home</a>
+                <a href="#">Plants</a>
+                <a href="#">PlantCare</a>
+                <a href="./essentials.html">Essentials</a>
+                <a href="#">Nearby Nurseries</a>
+                <a href="#">AI chatbot</a>
+            </div>
+            <div class="Cart_Login">
+                <a href="./cart.html"><i class="fa-solid fa-cart-shopping" style="color: #242020; font-size: 20px;"></i></a>
+                <a href="#" class="Login_option"><i class="fa-solid fa-circle-user" style="color: #252628; font-size: 20px;"></i>
+                    <div class="Login_SignUp">Login</div>
+                </a>
+            </div>
+            <div class="header_side_bars">
+                <div class="header_bars" onclick="Open()">
+                    <i class="fa-solid fa-bars" style="color: #141010;"></i>
+                </div>
+                <div class="header_menu">
+                    <div class="cross" onclick="Close()">&times;</div>
+                    <div class="submenu"><a href="#">Home</a></div>
+                    <div class="submenu"><a href="#">Plants</a></div>
+                    <div class="submenu"><a href="#">PlantCare</a></div>
+                    <div class="submenu"><a href="#">Essentials</a></div>
+                    <div class="submenu"><a href="#">Nearby Nurseries</a></div>
+                    <div class="submenu"><a href="#">AI chatbot</a></div>
+                    <div class="submenu"><a href="#">Cart</a></div>
+                    <div class="submenu"><a href="#">Login/Sign Up</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Section -->
+
+    <section id="health">
+        <h2>🧴 Plant Health & Pest Control</h2>
+        <div class="essentials-grid">
+            <div class="card"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/soil-manure/a/g/n/0-2-natural-organic-cold-pressed-pure-neem-oil-for-spray-on-original-imah2fdf7h8zzfuf.jpeg?q=70"/><h3>Neem Oil Spray</h3><p>Organic pest and fungus repellent.</p><p>₹376 <s>₹465</s> <span style="color: green;">19% off</span></p><button>Add to Cart</button></div>
+            <div class="card"><img src="https://rukminim2.flixcart.com/image/612/612/kg2l47k0/insect-repellent/s/p/c/1-pack-of-1-10-pieces-eco-yellow-sticky-trap-for-garden-farm-original-imafwdgxy9jzeqz2.jpeg?q=70"/><h3>Sticky Insect Traps</h3><p>Attracts and traps flying bugs.</p><p>₹350 <s>₹700</s> <span style="color: green;">50% off</span></p><button>Add to Cart</button></div>
+            <div class="card"><img src="https://m.media-amazon.com/images/I/81W7FzcctiL._AC_UL480_FMwebp_QL65_.jpg"/><h3>Insecticidal Soap</h3><p>Gentle on plants, tough on pests.</p><p>₹110 <s>₹999</s> <span style="color: green;">77% off</span></p><button>Add to Cart</button></div>
+            <div class="card"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/soil-manure/z/f/w/garden-fungicide-nature-organic-fungicide-for-plant-fungal-original-imagzmcbskgx47bx.jpeg?q=70"/><h3>Fungicide Powder</h3><p>Protects against leaf and root fungus.</p><p>₹336 <s>₹429</s> <span style="color: green;">21% off</span></p><button>Add to Cart</button></div>
+            <div class="card"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/soil-manure/q/a/k/100-organic-plant-growth-booster-liquid-fertilizer-for-home-original-imah5f89dcawvezy.jpeg?q=70"/><h3>Plant Growth Booster</h3><p>Speeds up healthy plant development.</p><p>₹250 <s>₹849</s> <span style="color: green;">70% off</span></p><button>Add to Cart</button></div>
+            <div class="card"><img src="https://rukminim2.flixcart.com/image/612/612/kiow6fk0-0/soil-manure/h/l/e/premium-quality-organic-vermicompost-fertilizer-manure-for-original-imafyfdwhqhqzzh4.jpeg?q=70"/><h3>Organic Pesticide</h3><p>Safe and natural insect control.</p><p>₹126 <s>₹299</s> <span style="color: green;">57% off</span></p><button>Add to Cart</button></div>
+            <div class="card"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/soil-manure/4/w/u/100-mealy-bug-killer-spray-for-plants-1-lofiyan-original-imah57g3qykznnez.jpeg?q=70"/><h3>Anti-fungal Spray</h3><p>Treats common fungal infections.</p><p>₹206 <s>₹599</s> <span style="color: green;">65% off</span></p><button>Add to Cart</button></div>
+            <div class="card"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/soil-manure/f/r/l/0-25-plant-growth-flower-booster-root-growth-tonic-organic-original-imagwm76whggsq8c.jpeg?q=70"/><h3>Root Tonic</h3><p>Stimulates healthy root systems.</p><p>₹100 <s>₹999</s> <span style="color: green;">77% off</span></p><button>Add to Cart</button></div>
+            <div class="card"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/plant-sapling/j/t/n/yes-annual-yes-plant-growth-liquid-supplement-for-home-garden-original-imahfvgssxqwcatn.jpeg?q=70"/><h3>Plant Vitamin Drops</h3><p>Supplements plant health and growth.</p><p>₹296 <s>₹999</s> <span style="color: green;">65% off</span></p><button>Add to Cart</button></div>
+            <div class="card"><img src="https://rukminim2.flixcart.com/image/612/612/ki6bgcw0-0/insect-repellent/e/l/8/500-all-natural-snail-and-slug-spray-ready-to-use-1-green-dragon-original-imafyyzpxaqca85f.jpeg?q=70"/><h3>Slug & Snail Repellent</h3><p>Protects leaves from being eaten.</p><p>₹328 <s>₹599</s> <span style="color: green;">45% off</span></p><button>Add to Cart</button></div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+     <footer class="footer">
+           <div class="footer_top">
+                <div class="footer_about">
+                    <h2>EcoVANA</h2>
+                    <p>EcoVANA empowers plant lovers to transform <br>their homes into green spaces with ease and joy. <br>Join the eco-movement today!</p>
+                </div>
+
+                <div class="footer_contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@ecovana.com</p>
+                    <p><i class="fas fa-phone"></i> ‪+91 98765 43210‬</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+                </div> 
+                <div class="follow_us">
+                    <h3>Follow Us</h3>
+                    <div class="social_media">
+                        <i class="fa-lg fa-brands fa-instagram"></i>
+                        <i class="fa-lg fa-brands fa-twitter"></i>
+                        <i class="fa-lg fa-brands fa-youtube"></i>
+                        <i class="fa-lg fa-brands fa-facebook"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <hr>
+                <br>
+                <div class="copy_right">
+                    <p>&copy; 2025 EcoVANA. All rights reserved.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made with❤</p>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section -->
+    <script>
+        function Open(){
+            document.getElementsByClassName("header_menu")[0].style="right:0px; top:-45px;";
+        }
+        function Close(){
+            document.getElementsByClassName("header_menu")[0].style="right:-250px; top:-45px";
+        }
+    </script>
+    <script src="script.js"/>
+    <script>
+        window.addEventListener("pageshow", function (event) {
+            if (event.persisted) {
+            window.location.reload();
+            }
+        });
+    </script>
+</body>
+</html>
