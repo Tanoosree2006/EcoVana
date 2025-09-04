@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EcoVANA Gardening Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="stylesheet" href="./demoStyles.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="background-blur"></div>6
+  <div class="home_button"><a href="./homepage.html">Home</a></div>
+  <div class="container">
+    <div class="form-header">
+      <h2>ECOVANA AI Gardening Assistant</h2>
+      <marquee>
+          <p>🌱Growing your own plants promotes sustainability, relaxation, and healthier living.🌱</p>
+        </marquee>
+    </div>
+    <form id="gardenForm">
+      <label>What type of garden are you planning?</label>
+      <input type="text" name="gardenType" placeholder="e.g: indoor, terrace, balcony, etc.." required>
+
+      <label>How much sunlight does your garden receive daily?</label>
+      <input type="text" name="sunlight" placeholder="e.g: full sun (6+ hrs), partial sun, shade" required>
+
+      <label>What is the typical weather in your area?</label>
+      <input type="text" name="weather" placeholder="e.g: hot and dry, humid, rainy, cold" required>
+
+      <label>Which plants do you want to grow?</label>
+      <input type="text" name="plantList" placeholder="e.g: vegetables,fruits,flowers,herbs etc.."required>
+
+      <label>Do you know the type of soil you’re using?</label>
+      <input type="text" name="soilType" placeholder="e.g: red soil, clay, sandy, unsure" required>
+
+      <label>Do you plan to use organic compost or chemical fertilizers?</label>
+      <input type="radio" name="fertilizer" value="Organic"> Organic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" name="fertilizer" value="Chemical"> Chemical&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" name="fertilizer" value="Both"> Both&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" name="fertilizer" value="Not Sure"> Not Sure
+
+      <label>Do you have any personal concerns or custom problems?</label>
+      <input type="text" name="userQuery" />
+
+      <label>Upload an image of your space (optional):</label>
+      <input type="file" name="image"><br>
+
+      <div class="button-wrapper">
+        <button type="submit">Submit to AI</button>
+      </div>
+    </form>
+
+    
+  </div>
+  
+  <!-- 💬 Chatbot Button -->
+  <button id="chatbot-toggler">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-rounded">close</span>
+      </button>
+
+  <!-- 🔵 Chatbot Popup -->
+  <div class="chatbot-popup">
+        <!-- Header -->
+        <div class="chat-header">
+          <div class="header-info">
+            <div class="chatbot-logo">
+              <img src="./aiimg.png"/>
+            </div>
+            <h2 class="logo-text">EcoVANA Chatbot</h2>
+          </div>
+          <button id="close-chatbot" class="material-symbols-rounded">keyboard_arrow_down</button>
+        </div>
+
+        <!-- Chat body -->
+        <div class="chat-body">
+          <div class="message bot-message">
+            <div class="bot-avatar">
+              <img id = "icon" src="./aiimg2.png"/>
+            </div>
+            <div class="message-text">
+              Hey there I'm Ecovana<br> How can I help you today?
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Footer -->
+        <div class="chat-footer">
+          <form class="chat-form">
+            <textarea placeholder="Message..." class="message-input" required></textarea>
+            <div class="chat-controls">
+              <button id="emoji-picker" class="material-symbols-outlined">sentiment_satisfied</button>
+              <div class="file-upload-wrapper">
+                <input type="file" accept="image/*" id="file-input" hidden />
+                <img src="#" />
+                <button type="button" id="file-upload" class="material-symbols-rounded">attach_file</button>
+                <button type="button" id="file-cancel" class="material-symbols-rounded">close</button>
+              </div>
+              <button type="submit" id="send-message" class="material-symbols-rounded">arrow_upward</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+<script src="./demoscript.js"></script>
+</body>
+</html>

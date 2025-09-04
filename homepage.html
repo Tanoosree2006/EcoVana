@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoVANA</title>
+  
+  <!-- Slick CSS -->
+   <!-- <link rel="stylesheet" href="../../HeaderStyles.css"> -->
+  <link rel="stylesheet" href="./HeaderStyles.css">
+  <link rel="stylesheet" href="./FooterStyles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+            <div class="header_logo">
+                <img src="./logo.jpg" alt="logo">
+            </div>
+            <div class="header_navLinks">
+                <a href="./homepage.html">Home</a>
+                <a href="../../PlantsModified.html">Plants</a>
+                <a href="../../Plant_care/rough.html">PlantCare</a>
+                <a href="../../Essentials/project2/essentials.html">Essentials</a>
+                <a href="../../NearByNursery/New folder/FinalNewNersery.html">Nearby Nurseries</a>
+                <a href="./demo.html">AI chatbot</a>
+            </div>
+            <div class="Cart_Login">
+                <a href="../../Essentials/project2/cart.html"><i class="fa-solid fa-cart-shopping" style="color: #242020; font-size: 20px;"></i></a>
+                <a href="../../LoginPage/LoginPage/mainlogin.html" class="Login_option"><i class="fa-solid fa-circle-user" style="color: #252628; font-size: 20px;"></i>
+                    <div class="Login_SignUp">Logout</div>
+                </a>
+            </div>
+            <div class="header_side_bars">
+                <div class="header_bars" onclick="Open()">
+                    <i class="fa-solid fa-bars" style="color: #141010;"></i>
+                </div>
+                <div class="header_menu">
+                    <div class="cross" onclick="Close()">&times;</div>
+                    <div class="submenu"><a href="./homepage.html"><i class="fa-solid fa-house" style="color: #242629;"></i>&nbsp;Home</a></div>
+                    <div class="submenu"><a href="../../PlantsModified.html"><i class="fa-solid fa-leaf" style="color: #272a2f;"></i>&nbsp;Plants</a></div>
+                    <div class="submenu"><a href="../../Plant_care/rough.html"><i class="fa-solid fa-seedling" style="color: #2f343d;"></i>&nbsp;PlantCare</a></div>
+                    <div class="submenu"><a href="../../Essentials/project2/essentials.html"><i class="fa-solid fa-mitten" style="color: #343941;"></i>&nbsp;Essentials</a></div>
+                    <div class="submenu"><a href="../../NearByNursery/New folder/FinalNewNersery.html"><i class="fa-solid fa-location-dot" style="color: #303640;"></i>&nbsp;Nearby Nurseries</a></div>
+                    <div class="submenu"><a href="./demo.html"><i class="fa-solid fa-robot" style="color: #2e3238;"></i>&nbsp;AI chatbot</a></div>
+                    <div class="submenu"><a href="../../Essentials/project2/cart.html"><i class="fa-solid fa-cart-shopping" style="color: #2a2d32;"></i>&nbsp;Cart</a></div>
+                    <div class="submenu"><a href="../../LoginPage/LoginPage/mainlogin.html"><i class="fa-solid fa-circle-user" style="color: #343941;"></i>&nbsp;Logout</a></div>
+                </div>
+            </div>
+        </div>
+
+    <div class="slider">
+      <div class="slide-item">
+        <img src="./slide1.jpg" alt="Slide 1">
+        <div class="slide-caption">
+          <h1>Eco<span>VANA</span></h1>
+          <p>Build Your Own Beautiful Garden</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <img src="./slide12.jpg" alt="Slide 2">
+        <div class="slide-caption1">
+          <p>❝Turn your home into a green haven with easy, sustainable gardening.<br>
+          Grow fresh plants, herbs, and joy—right at your doorstep.❞</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <img src="./slide16.jpg" alt="Slide 7">
+        <div class="slide-caption2">
+          <p>❝Make your home your sanctuary with colorful blooms.<br>
+          Home gardening is not a hobby, it's a lifestyle.❞</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <img src="./slide4.jpg" alt="Slide 4">
+        <div class="slide-caption3">
+            <p>❝Bring nature closer with your own home garden.<br>
+              Grow, nurture, and bloom with every season.❞</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <img src="./slide2.jpg" alt="Slide 5">
+        <div class="slide-caption4">
+          <p>❝Every seed you plant is a step toward a greener life.<br>
+            Start your gardening journey today—right at home.❞</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <img src="./slide14.jpg" alt="Slide 6">
+        <div class="slide-caption5">
+          <p>❝Create a vibrant green space in any corner of your home.<br>
+          Home gardening made simple, fun, and fulfilling!❞</p>
+        </div>
+      </div>
+    </div>
+    <div class="categories">
+        <div class="cate plants">
+          <div class="circle">
+            <img src="./category2.webp"/>
+          </div>
+          <p>Plants</p>
+        </div>
+        <div class="cate care">
+          <div class="circle">
+            <img src="./category3-removebg-preview.png"/>
+          </div>
+          <p>Care</p>
+        </div>
+        <div class="cate essentials">
+          <div class="circle">
+            <img src="./category5-removebg-preview.png"/>
+          </div>
+          <p>Essentials</p>
+        </div>
+        <div class="cate nursery">
+          <div class="circle">
+            <img src="./category7.jpg"/>
+          </div>
+          <p>Locations</p>
+        </div>
+        <div class="cate ai">
+          <div class="circle">
+            <img src="./category8-removebg-preview.png"/>
+          </div>
+          <p>AI-Chatbot</p>
+        </div>
+      
+    </div>
+    <div class="main">
+      <div class="main_left">
+        <div class="main_left_content">
+          <h2>Decorate your life with greenery!</h2>
+          <ul class="left_para">
+            <li><p id="para">Ecovana is your personal guide to building the perfect home garden. Whether you're growing herbs on a windowsill, setting up a terrace garden, or planning a backyard oasis, we’re here to help every step of the way.</p></li>
+            <li><p id="para">We empower green living by combining traditional gardening knowledge with modern AI support through our intelligent chatbot.</p></li>
+            <li><p id="para">Let us grow together — one plant at a time.</p></li>
+          </ul>
+          <h2>Our Main Services</h2>
+          <ul class="tick-list">
+            <li><p id="para2">Indoor and outdoor plant suggestions based on space</p></li>
+            <li><p id="para2">Gardening layout ideas using image-based AI recommendations</p></li>
+            <li><p id="para2">AI Garden Assistant to answer all plant care questions</p></li>
+            <li><p id="para2">Nearby nursery finder using location-based technology</p></li>
+            <li><p id="para2">Organic gardening video tips and plant care tutorials</p></li>
+            <li><p id="para2">Soil & sunlight compatibility check</p></li>
+            <li><p id="para2">Customized garden plans for beginners to pros</p></li>
+            <li><p id="para2">Composting and fertilizer guidance</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main_right">
+        <div class="main_right_content">
+          <h2>Shortly About Us</h2>
+          <div class="info1">
+            <div class="info1_left"><img src="./plant1.webp"/></div>
+            <div class="info1_right">
+              <strong>Why Choose Us?</strong>
+              <p>We blend nature and technology. Ecovana is built for urban gardeners looking for smart solutions in limited spaces.</p>
+            </div>
+          </div>
+          <div class="info2">
+            <div class="info2_left"><img src="./plant3.jpg"/></div>
+            <div class="info2_right">
+              <strong>Our Experience</strong>
+              <p>Our team includes botany lovers, environmentalists, and tech experts. Together, we’ve created a simple platform for every home gardener.</p>
+            </div>
+          </div>
+          <div class="info3">
+            <div class="info3_left"><img src="./plant2.webp"/></div>
+            <div class="info3_right">
+            <strong>How We Work</strong>
+            <p>Answer a few simple questions, upload a photo of your garden space, and let our AI assistant guide you step-by-step.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <footer class="footer">
+           <div class="footer_top">
+                <div class="footer_about">
+                    <h2>EcoVANA</h2>
+                    <p>EcoVANA empowers plant lovers to transform <br>their homes into green spaces with ease and joy. <br>Join the eco-movement today!</p>
+                </div>
+
+                <div class="footer_contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@ecovana.com</p>
+                    <p><i class="fas fa-phone"></i> ‪+91 98765 43210‬</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+                </div> 
+                <div class="follow_us">
+                    <h3>Follow Us</h3>
+                    <div class="social_media">
+                        <i class="fa-lg fa-brands fa-instagram"></i>
+                        <i class="fa-lg fa-brands fa-twitter"></i>
+                        <i class="fa-lg fa-brands fa-youtube"></i>
+                        <i class="fa-lg fa-brands fa-facebook"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <hr>
+                <br>
+                <div class="copy_right">
+                    <p>&copy; 2025 EcoVANA. All rights reserved.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made with❤️</p>
+                </div>
+            </div>
+        </footer>
+
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick JS -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
+        dots: true,
+        infinite: true
+      });
+    });
+
+            function Open(){
+                document.getElementsByClassName("header_menu")[0].style="right:0px; top:-45px;";
+            }
+            function Close(){
+                document.getElementsByClassName("header_menu")[0].style="right:-250px; top:-45px";
+            }
+
+  </script>
+
+</body>
+</html>
