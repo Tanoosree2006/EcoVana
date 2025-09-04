@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #e6f4ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 800px;
+  height: 500px;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.card {
+  width: 250px; /* or any smaller value like 320px */
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s ease-in-out;
+}
+
+#flip-toggle {
+  display: none;
+}
+
+.card-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  perspective: 1000px;
+}
+
+.intro-panel {
+  width: 45%;
+  background: linear-gradient(135deg, #2bb673, #1c8c52);
+  color: white;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.intro-panel h2 span {
+  color: #fff;
+}
+
+.intro-panel p {
+  margin: 10px 0;
+}
+
+.intro-btn {
+  margin-top: 30px;
+  padding: 10px 25px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.intro-btn:hover {
+  background: white;
+  color: #2bb673;
+}
+
+.card {
+  width: 55%;
+  background: white;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+#flip-toggle:checked ~ .card-wrapper .card {
+  transform: rotateY(180deg);
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  border-radius: 0 20px 20px 0;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.side h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  text-align: center;
+  color: #2bb673;
+}
+
+.inputfield {
+  margin-bottom: 10px;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform:translateY(-50%);
+  color: #2bb673;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 8px 10px 8px 35px;
+  font-size:14px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline:none;
+  box-shadow:0px 4px 6px -6px #444;
+  border-radius: 0px;
+  transition: border-color 0.3s ,box-shadow 0.3s;
+}
+
+.input-wrapper input:focus {
+  border-bottom: 2px solid #2bb673;
+}
+.input-wrapper input:hover {
+  border-bottom: 2px solid #2bb673;
+  box-shadow: 0 4px 6px -4px #2bb673; /* slight glow */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #2bb673;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #249e64;
+}
+
+label[for="flip-toggle"] {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #2bb673;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .side {
+    padding: 40px 30px;
+  }
+
+  .intro-panel h2 {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    height: 500px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .intro-panel {
+    display: none;
+  }
+
+  .card-wrapper {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .side {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .side h2 {
+    font-size: 22px;
+  }
+
+  .input-wrapper input {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  label[for="flip-toggle"] {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+}

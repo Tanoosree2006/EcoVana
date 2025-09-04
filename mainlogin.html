@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <title>GreenApp Login/Signup</title>
+  <link rel="stylesheet" href="./mainlogin.css">
+</head>
+<body>
+
+  <div class="container">
+    <input type="checkbox" id="flip-toggle" />
+
+    <div class="card-wrapper">
+      <!-- Intro Panel -->
+      <div class="intro-panel">
+        <div class="logo">
+          <img src="../../logo.jpg" alt="EcoVANA Logo" />
+        </div>
+        <h2>Welcome to&nbsp;<span>EcoVANA</span></h2>
+        <p>We make it for you</p>
+      </div>
+
+      <!-- Card Section (Login/Signup) -->
+      <div class="card">
+        <!-- Login -->
+        <div class="side front">
+          <h2>Login</h2>
+          <div class="inputfield">
+            <div class="input-wrapper">
+              <i class="fas fa-envelope"></i>
+              <input type="text" id="loginEmail" placeholder="Email" />
+            </div>
+            <div class="input-wrapper">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="loginPassword" placeholder="Password" />
+            </div>
+          </div>
+          <button onclick="login()">Sign In</button>
+          <label for="flip-toggle" class="flip-label">Don't have an account? Sign up</label>
+        </div>
+
+        <!-- Signup -->
+        <div class="side back">
+          <h2>Sign Up</h2>
+          <div class="inputfield">
+            <div class="input-wrapper">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="signupName" placeholder="Username" />
+            </div>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="signupEmail" placeholder="Email" />
+            </div>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="signupPassword" placeholder="Password" />
+            </div>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="signupConfirm" placeholder="Confirm Password" />
+            </div>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-cake-candles"></i>
+              <input type="date" id="signupDOB" />
+            </div>
+          </div>
+          <button onclick="signup()">Sign Up</button>
+          <label for="flip-toggle" class="flip-label">Already have an account? Login</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function signup() {
+      const name = document.getElementById("signupName").value.trim();
+      const email = document.getElementById("signupEmail").value.trim();
+      const password = document.getElementById("signupPassword").value;
+      const confirmPassword = document.getElementById("signupConfirm").value;
+      const dob = document.getElementById("signupDOB").value;
+
+      if (!name || !email || !password || !confirmPassword || !dob) {
+        alert("All fields are required.");
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      const users = JSON.parse(localStorage.getItem("users") || "[]");
+      if (users.some(u => u.email === email)) {
+        alert("Email already exists.");
+        return;
+      }
+
+      users.push({ name, email, password, dob });
+      localStorage.setItem("users", JSON.stringify(users));
+      alert("Signup successful! Please login.");
+      document.getElementById("flip-toggle").checked = false;
+    }
+
+    function login() {
+      const email = document.getElementById("loginEmail").value.trim();
+      const password = document.getElementById("loginPassword").value;
+      if (!email || !password) {
+        alert(" ⚠️ Email and Password are required.");
+        return;
+      }
+
+      const users = JSON.parse(localStorage.getItem("users") || "[]");
+      const match = users.find(u => u.email === email && u.password === password);
+
+      if (match) {
+        localStorage.setItem("currentUser", JSON.stringify(match));
+        alert(` ✅ Welcome back, ${match.name}! `);
+        window.location.href="../../Project/Project/homepage.html";
+      } else {
+        alert("❌ Invalid email or password. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>
