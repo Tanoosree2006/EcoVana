@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nursery Finder - Light Theme</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f9f4;
+      color: #333;
+      position: relative;
+      padding-top:0px;
+      padding-bottom:0px;
+    }
+
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-image: url("https://marketplace.canva.com/EAGU1AYaPxs/1/0/1131w/canva-green-floral-background-flyer-NqWSblb04zc.jpg");
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-attachment: fixed;
+      z-index: -2;
+    }
+
+    .header {
+      position:relative; 
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #c3e9c2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      z-index:3000px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .header_logo img {
+      height: 90px;
+    }
+    .header_navLinks a, .Cart_Login a {
+      font-size: 17px;
+      color: black;
+      padding: 10px 8px;
+    }
+    .header_navLinks a {
+      margin: 12px;
+    }
+    .header_navLinks a:hover {
+      color:white;
+      background-color: #5C4033;
+      border-radius:10px;
+    }
+    .Cart_Login {
+      position: relative;
+      margin-right: 20px;
+    }
+    .Login_option {
+      position: relative;
+      display: inline-block;
+    }
+    .Login_SignUp {
+      display: none;
+      position: absolute;
+      top: 75%;  
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #CDEAC0;
+      border-radius: 5px;
+      padding: 5px 10px;
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .Login_option:hover .Login_SignUp {
+      display: block;
+    }
+    .header_side_bars {
+      display: none; 
+      padding-right: 20px;
+    }
+    .header_bars {
+      cursor: pointer;
+    }
+    .header_menu {
+      position: fixed;
+      width: 250px;
+      height: 100vh;
+      top: 0;
+      right: -250px;
+      transition: right 0.4s ease;
+      background-color: #CDEAC0;
+      z-index: 1001; 
+    }
+    .submenu {
+      width: 100%;
+      padding: 15px 20px;
+      border-bottom: 1px solid #5C4033;
+      cursor: pointer;  
+    }
+    .submenu a {
+      color: black;
+    }
+    .submenu:hover {
+      background-color: #5C4033;
+    }
+    .submenu:hover a {
+      color: white;
+      text-shadow: 1px 2px 4px grey;
+    }
+    .cross {
+      font-size: 35px;
+      color: black;
+      cursor: pointer;
+      padding: 10px 20px;
+      text-align: right;
+    }
+    .cross:hover {
+      background-color: red;
+      color: white;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 1;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: forestgreen;
+      font-family: 'Pacifico', cursive;
+
+    }
+    header p {
+      font-size: 1.1rem;
+      color: chocolate;
+      font-family: 'Pacifico', cursive;
+    }
+    .search-container {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    #search-bar {
+      width: 100%;
+      max-width: 600px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 50px;
+      border: 2px solid #228b22;
+      background-color:white;
+      color: #333;
+    }
+    #search-bar:focus {
+      outline: none;
+      border-color: #228b22;
+    }
+    #nursery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background-color:white;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      width: calc(50% - 10px);
+      max-width: 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 15px;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #228b22;
+      margin-bottom: 5px;
+    }
+    .card-text {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1002;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      background-color: #fff;
+      color: #333;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .modal-content img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    .modal-content h2 {
+      color: #228b22;
+      margin-bottom: 15px;
+    }
+    .modal-content p, .modal-content address {
+      line-height: 1.6;
+    }
+    .modal-buttons {
+      margin-top: 20px;
+      text-align: right;
+    }
+    .modal-map-link, .modal-close-btn {
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      margin-left: 10px;
+    }
+    .modal-map-link {
+      background-color: #28a745;
+      color: white;
+    }
+    .modal-close-btn {
+      background-color: #6c757d;
+      color: white;
+    }
+
+
+    #faq-section {
+      max-width: 800px;
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid #ddd;
+    }
+    .faq-item {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .faq-item:hover {
+      background-color: #f8f8f8;
+    }
+    .faq-item h3 {
+      color: #228b22;
+      margin-bottom: 0;
+    }
+    .faq-item p {
+      color: #333;
+      line-height: 1.6;
+      margin-top: 0;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out, margin-top 0.5s ease-in-out;
+    }
+    .faq-item:hover p {
+      margin-top: 15px;
+      max-height: 150px;
+      opacity: 1;
+    }
+
+
+    .footer {
+      position:relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index:3000px;
+    }
+    .footer_top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #8C7153;
+      color: white;
+      padding: 1rem;
+    }
+    .footer h2, .footer h3 {
+      padding: 0.5rem;
+      color: #FFF4B0;
+    }
+    .footer_contact, .footer_about {
+      line-height: 24px;
+    }
+    .social_media {
+      padding: 5px;
+    }
+    .social_media i {
+      padding-right: 8px;
+    }
+    .footer_bottom {
+      padding: 20px;
+      color: white;
+      background-color: #8C7153;
+    }
+    .footer_bottom hr {
+      border: none;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 10px 0;
+      width: 100%;
+    }
+    .copy_right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    @media (max-width: 1010px) {
+      .header_navLinks, .Cart_Login {
+          display: none;
+      }
+      .header_side_bars {
+          display: block;
+      }
+      .card { 
+        width: calc(50% - 10px);
+      }
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+    }
+    @media (max-width: 480px) {
+      .card { width: 100%; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+      <div class="header_logo">
+          <img src="./UpdatedLogo.png" alt="logo">
+      </div>
+      <div class="header_navLinks">
+          <a href="../../Project/Project/homepage.html">Home</a>
+          <a href="../../PlantsModified.html">Plants</a>
+          <a href="../../Plant_care/rough.html">PlantCare</a>
+          <a href="../../Essentials/project2/essentials.html">Essentials</a>
+          <a href="./FinalNewNersery.html">Nearby Nurseries</a>
+          <a href="../../Project/Project/demo.html">AI chatbot</a>
+      </div>
+      <div class="Cart_Login">
+          <a href="../../Essentials/project2/cart.html"><i class="fa-solid fa-cart-shopping" style="color: #242020; font-size: 20px;"></i></a>
+          <a href="../../LoginPage/LoginPage/mainlogin.html" class="Login_option">
+              <i class="fa-solid fa-circle-user" style="color: #252628; font-size: 20px;"></i>
+              <div class="Login_SignUp">Login</div>
+          </a>
+      </div>
+      <div class="header_side_bars">
+          <div class="header_bars" onclick="Open()">
+              <i class="fa-solid fa-bars" style="color: #141010; font-size: 24px;"></i>
+          </div>
+          <div class="header_menu">
+              <div class="cross" onclick="Close()">×</div>
+              <div class="submenu"><a href="../../Project/Project/homepage.html">Home</a></div>
+              <div class="submenu"><a href="../../PlantsModified.html">Plants</a></div>
+              <div class="submenu"><a href="../../Plant_care/rough.html">PlantCare</a></div>
+              <div class="submenu"><a href="../../Essentials/project2/essentials.html">Essentials</a></div>
+              <div class="submenu"><a href="./FinalNewNersery.html">Nearby Nurseries</a></div>
+              <div class="submenu"><a href="../../Project/Project/demo.html">AI chatbot</a></div>
+              <div class="submenu"><a href="../../Essentials/project2/cart.html">Cart</a></div>
+              <div class="submenu"><a href="../../LoginPage/LoginPage/mainlogin.html">Login/Sign Up</a></div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>Nearby Nurseries</h1>
+      <p>Find your next green friend</p>
+    </header>
+
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search by nursery name...">
+    </div>
+
+    <div id="nursery-grid">
+      </div>
+  </div>
+
+  <div id="modal-container">
+    </div>
+
+  <div class="container" id="faq-section">
+      <header>
+          <h1>Frequently asked questions</h1>
+          <p>Common questions our visitors might ask.</p>
+      </header>
+      <div class="faq-item">
+          <h3>How do I contact a nursery?</h3>
+          <p>You can find the phone number for each nursery by clicking on its card to see the details. A "View on Google Maps" link is also provided for location and directions.</p>
+      </div>
+      <div class="faq-item">
+          <h3>Are the opening hours listed?</h3>
+          <p>Opening hours are not listed directly on this site. We recommend calling the nursery or checking their Google Maps profile for the most up-to-date information before visiting.</p>
+      </div>
+      <div class="faq-item">
+          <h3>What types of plants are available?</h3>
+          <p>Each nursery has a unique selection, ranging from indoor plants and succulents to outdoor shrubs and fruit trees. For specific plant availability, it's best to contact the nursery directly.</p>
+      </div>
+      <div class="faq-item">
+          <h3>Do these nurseries offer delivery services?</h3>
+          <p>Some nurseries may offer local delivery for a fee, especially for large orders. Please inquire with the individual nursery to see if this is an option for you.</p>
+      </div>
+      <div class="faq-item">
+          <h3>Can I get gardening advice at these locations?</h3>
+          <p>Absolutely! The staff at these nurseries are typically very knowledgeable and passionate about plants. They are a great resource for gardening tips, plant care, and pest control advice.</p>
+      </div>
+       <div class="faq-item">
+          <h3>What are the typical payment options?</h3>
+          <p>Most nurseries accept cash and major digital payment methods (like UPI in India). It's always a good idea to confirm with them beforehand if you plan to use a credit or debit card.</p>
+      </div>
+       <div class="faq-item">
+          <h3>Are there any discounts for bulk purchases?</h3>
+          <p>Many nurseries offer discounts if you are buying in bulk for landscaping projects or large gardens. Don't hesitate to ask the owner or manager for a bulk rate.</p>
+      </div>
+  </div>
+  <footer class="footer">
+      <div class="footer_top">
+          <div class="footer_about">
+              <h2>EcoVANA</h2>
+              <p>EcoVANA empowers plant lovers to transform <br>their homes into green spaces with ease and joy. <br>Join the eco-movement today!</p>
+          </div>
+          <div class="footer_contact">
+              <h3>Contact Us</h3>
+              <p><i class="fas fa-envelope"></i> support@ecovana.com</p>
+              <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+              <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+          </div> 
+          <div class="follow_us">
+              <h3>Follow Us</h3>
+              <div class="social_media">
+                  <i class="fa-lg fa-brands fa-instagram"></i>
+                  <i class="fa-lg fa-brands fa-twitter"></i>
+                  <i class="fa-lg fa-brands fa-youtube"></i>
+                  <i class="fa-lg fa-brands fa-facebook"></i>
+              </div>
+          </div>
+      </div>
+      <div class="footer_bottom">
+          <hr>
+          <div class="copy_right">
+              <p>© 2025 EcoVANA. All rights reserved.<br>Made with❤</p>
+          </div>
+      </div>
+  </footer>
+  <script>
+    function Open(){
+      document.querySelector(".header_menu").style.right = "0px";
+    }
+    function Close(){
+      document.querySelector(".header_menu").style.right = "-250px";
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const nurseryData = [
+        { id: 1, name: "Sridha Nursery", owner: "Sridha", address: "Door No: NH16, Cheppela Village, Alamuru - 533233", phone: "08128565171", imgCard: "https://content.jdmagicbox.com/v2/comp/delhi/y1/011pxx11.xx11.110709181753.i1y1/catalogue/nishu-nursery-and-paradise-landscape-enterprises-sarfabad-noida-landscape-gardening-5347ldt3z4.jpg", imgModal: "https://images.jdmagicbox.com/comp/def_content/plant_nurseries/default-plant-nurseries-6.jpg", mapQuery: "Cheppela Village, Alamuru 533233" },
+        { id: 2, name: "Sri Satya Venkata Sai Nursery", owner: "Ravi Kumar", address: "Door No: 6-139, Near Flower Market, Kadiyapulanka, T Nagar - 533101", phone: "08867890922", imgCard: "https://content.jdmagicbox.com/comp/rajahmundry/t2/9999px883.x883.151222150146.x2t2/catalogue/satya-venkata-sai-nursery-rajahmundry-landscape-manufacturers-esgxd.jpg", imgModal: "https://content.jdmagicbox.com/comp/def_content/plant_nurseries/default-plant-nurseries-4.jpg", mapQuery: "Kadiyapulanka T Nagar 533101" },
+        { id: 3, name: "Lalitha Varahi Nursery", owner: "Lalitha Varahi", address: "Rajendra Nagar, Near Kadiyapulanka Road, Rajahmundry - 533104", phone: "09054244713", imgCard: "https://content.jdmagicbox.com/v2/comp/rajahmundry/y9/9999px883.x883.250112180720.j2y9/catalogue/lalitha-varahi-nursery-rajendra-nagar-rajahmundry-f1d3fzsa3t-250.jpg", imgModal: "https://content.jdmagicbox.com/comp/def_content/plant_nurseries/default-plant-nurseries-3.jpg", mapQuery: "Rajendra Nagar, Rajahmundry 533104" },
+        { id: 4, name: "Satyadeva Nursery", owner: "Pulla Chantiyya", address: "Kadiyapulanka to Veera Varam Road, T Nagar - 533101", phone: "0812885263", imgCard: "https://content3.jdmagicbox.com/comp/rajahmundry/i7/9999px883.x883.201204125407.w1i7/catalogue/satyadeva-nursery-pulla-chantiyya-rajahmundry-rajahmundry-fruit-plant-nurseries-qs99g8ew0l.jpg", imgModal: "https://content.jdmagicbox.com/comp/rajahmundry/i7/9999px883.x883.201204125407.w1i7/catalogue/satyadeva-nursery-pulla-chantiyya-rajahmundry-rajahmundry-fruit-plant-nurseries-xdmwhsw6ka.jpg", mapQuery: "Kadiyapulanka to Veera Varam Road, T Nagar 533101" },
+        { id: 5, name: "J S S Nursery", owner: "J.S", address: "Burri Lanka, Kadiyapulanka, T Nagar - 533126", phone: "08511306067", imgCard: "https://images.jdmagicbox.com/comp/madurai/s7/0452px452.x452.171129130400.u3s7/catalogue/j-s-nursery-cordon-madurai-o9ux6.jpg?clr=", imgModal: "https://pbs.twimg.com/media/ELeGJc_U4AA_9Tn.jpg", mapQuery: "Burri Lanka, Kadiyapulanka" },
+        { id: 6, name: "Shivani Nurseries", owner: "Shivani", address: "2/96 Main Road Veeravaram Mallavanitota, Hanumantemple Near By, Main Road, Veeravaram-533126", phone: "07041203334", imgCard: "https://content3.jdmagicbox.com/v2/comp/east_godavari/d8/9999px883.x883.240629084050.v8d8/catalogue/shivani-nurseries-veeravaram-east-godavari-plant-nurseries-1q74fpjwx6.jpg", imgModal: "https://images.jdmagicbox.com/comp/deesa/y1/9999p2748.2748.191209202953.g7y1/catalogue/happy-nursery-deesa-deesa-plant-nurseries-9sovumocxs.jpg", mapQuery: "Shivani Nurseries, Veeravaram" },
+        { id: 7, name: "Kadiyam Nurseries", owner: "ADRao", address: "Mutyalamma Temple Backside, Canal Road, Kadiyapulanka, Andhra Pradesh 533126", phone: "9553385558", imgCard: "https://lh3.googleusercontent.com/p/AF1QipO2i2Gnve9dqhV5HXMJcNhScK4DVMaP67vAcV55=s1360-w1360-h1020-rw", imgModal: "https://lh3.googleusercontent.com/p/AF1QipPSzDqxbdA9obQhN34SwXBHnu0AlsG3ZzUBtkWH=s1360-w1360-h1020-rw", mapQuery: "Kadiyam Nurseries, Kadiyapulanka" },
+        { id: 8, name: "Prajawal Nurseries", owner: "Prajawal", address: "Kadiam Savaram Road 53312, Rajahmundry, E.G.D.T 533126", phone: "7799799143", imgCard: "https://lh3.googleusercontent.com/p/AF1QipP2YmVS1b54_YiXVb_5E95HPnFLFeKXxLKesZfN=w408-h306-k-no", imgModal: "https://content3.jdmagicbox.com/comp/east-godavari/k6/9999px883.x883.160522193037.e1k6/catalogue/kadiyam-nurserys-prajwal-nursery-kadiyam-east-godavari-fruit-plant-nurseries-9nhuqa12c8.jpg", mapQuery: "Prajawal Nurseries, Rajahmundry" },
+        { id: 9, name: "Mahindra Nurseries", owner: "Mahindra", address: "Veeravaram Rd, Kadiam, Andhra Pradesh 533126", phone: "09493616161", imgCard: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqz6Kj3yNSe8IhoWK4pFzw7QHColHvqRpAmXNK0V1kqpd4KBQlmtc6jonQyLsF9vDFOk_mCNyi5T3eu_VycjYe9UMH3hkU3mjMOgKL_WAPU5z9tFD-cw3s8eqMHCkOn_E4hv5_O=w408-h544-k-no", imgModal: "https://mahindranursery.com/cdn/shop/files/Golden_Pong_Pong_Tree_512x512.jpg?v=1730856143", mapQuery: "Mahindra Nurseries, Kadiam" },
+        { id: 10, name: "Eco Plant Nursery", owner: "Shahnaz Molla", address: "Beside D Mart, 2nd Road Godarigunta, Kakinada-3", phone: "07207818383", imgCard: "https://tiimg.tistatic.com/fp/1/005/703/eco-friendly-nursery-plants-406.jpg", imgModal: "https://content.jdmagicbox.com/v2/comp/delhi/v5/011pxx11.xx11.230821222347.z6v5/catalogue/m-v-star-nursery-gurgaon-sector-56-gurgaon-plant-nurseries-vtdoc950p9-250.jpg", mapQuery: "Eco Plant Nursery, Kakinada" },
+        { id: 11, name: "Sriram Nursery", owner: "Sri Ram", address: "ADB Road, Kotapadu Village, Rangampeta Mandal, Kotapadu, Andhra Pradesh 533291", phone: "09841191456", imgCard: "https://cdn.shopify.com/s/files/1/0379/8964/6467/files/Plant_Nursery_Near_Me_480x480.jpg?v=1736182946", imgModal: "https://content3.jdmagicbox.com/comp/bidar/h1/9999p8482.8482.200910130553.c1h1/catalogue/sri-ram-nursery-kankatta-bidar-flower-plantation-9pp9pfjekk.jpg", mapQuery: "Sriram Nursery, Kotapadu" },
+        { id: 12, name: "Indoor roots Nursery", owner: "Vinay", address: "AVA Rd, Gandhipuram, Rajamahendravaram, Andhra Pradesh 533103", phone: "09121724211", imgCard: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npSbSUKIE7YwGe2RXS0CWW9-8VgPwnYeWRvtGeIk7OR2lMVC2vk1xK1ypTd6ypotdsuXwXrzLwmMcmmtZDUmBnaGQ0dEMd8hlz4S7SezGmZvUWxqdCpF_AZaLEodh-fESMzj_NN=s1360-w1360-h1020-rw", imgModal: "https://content.jdmagicbox.com/comp/def_content/plant_nurseries/default-plant-nurseries-9.jpg", mapQuery: "Indoor roots Nursery, Rajamahendravaram" },
+        { id: 13, name: "Shazin Nursery", owner: "Shazin", address: "3rd Floor 1st Block, GSR PLAZA, Old Somalamma Temple Rd, Syamala Nagar, Gandhipuram, Rajamahendravaram, Andhra Pradesh 533103", phone: "07041208754", imgCard: "https://images.jdmagicbox.com/v2/comp/mumbai/e1/022pxx22.xx22.181112132557.e4e1/catalogue/roshan-nursery-malad-west-mumbai-plant-nurseries-w08kxkbkdf.jpg", imgModal: "https://cdn.shopify.com/s/files/1/0634/0997/9621/files/best_nursery_in_kadiyam_480x480.jpg?v=1682931086", mapQuery: "Shazin Nursery, Rajamahendravaram" },
+        { id: 14, name: "Green vision Nursery", owner: "Ravi krishna", address: "D.No:3-27/1,Meena Rao Nagar Kadiyapu Saavaram, Main Rd, Kadiam, Andhra Pradesh 533126", phone: "07799887633", imgCard: "https://th-i.thgim.com/public/news/cities/bangalore/ye39ty/article68519163.ece/alternates/FREE_1200/file7tlv8574kqpsa9649ak.jpg", imgModal: "https://55cefdf2dcf0a095fdf8.cdn6.editmysite.com/uploads/b/55cefdf2dcf0a095fdf824a802cc8fff9dd7787711a36e30497f1a80c87944b7/2024.5_1718379162.jpg?width=2400&optimize=medium", mapQuery: "Green vision Nursery, Kadiam" },
+        { id: 15, name: "Ratnakar Nursery", owner: "Ratnakar", address: "National Highway, Dowlaiswaram Industrial Estate, Industrial Estate, Dhavaleswaram, Rajamahendravaram, Andhra Pradesh 533125", phone: "09948424727", imgCard: "https://imgmediagumlet.lbb.in/media/2025/05/681af7ed727a257b0a067c9a_1746597869779.jpg", imgModal: "https://www.nowlucknow.com/wp-content/uploads/2020/07/Bhola-1024x536.jpg", mapQuery: "Ratnakar Nursery, Rajamahendravaram" },
+        { id: 16, name: "Vijya durga Nurseries", owner: "Vijya durga", address: "Ayyappa Nagar, Vijayawada, Andhra Pradesh 520007", phone: "08500765377", imgCard: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np_VgznH40ayEL8WmYiwDIIbqgB_wOQOUPHY298ezx5mMU790gCJ3YDF-kku94Uit619Ndl_XJAvn_KTxUm_H73K_hmi4A1amckSw1dCyIetSmrjmuCtmei7ZPjHD1UYYu1bew=s1360-w1360-h1020-rw", imgModal: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npr1Ge5xTTR3C4PPHHLaS6zBMOhvBpauBeFeBS-uAyPrlXtmG8JzXP_YCsfYaenJIGYK172gedYBdoTNEdGPrHdpeCFNeP6y9ZNRqdjqLpFQdhqutvN4nW0pDqdFK43j9TQJUvs6g=s1360-w1360-h1020-rw", mapQuery: "Vijya durga Nurseries, Vijayawada" },
+        { id: 17, name: "Godavari Nursery", owner: "Balaji", address: "FJXQ+JHR, beside anna canteen, Balaji Nagar, Krishna Lanka, Vijayawada, Andhra Pradesh 520013", phone: "07044503334", imgCard: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npEfugUMetHW4qv_laeLGilQTng8WBZH6rcC_Is1hBYqxcm0j8wmWsyWN3CJhfkmwPQM1fyYS2aZEqkSq79-4ELSVHM4N5vs4FY0OHGn2rGma-n6wlYfSOxn4-PGHyv1uEIyWg7og=s1360-w1360-h1020-rw", imgModal: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqjkbL2S6C8zSSNI4xNRb8zZyJwqyAP1Hq3T4elIZ-lAAmNnhcgVwSUXxQsE-mgui3HerXlQlA3z2ftfSMsduJPqRiqTnLD7u7Nwg8S6l7CrNaVgkKL8CGnwXi8qLVHa3GNtvOX=s1360-w1360-h1020-rw", mapQuery: "Godavari Nursery, Vijayawada" },
+        { id: 18, name: "Brundavan Nursery", owner: "Raja", address: "opp AB towers, Rani Gari Thota, Balaji Nagar, Krishna Lanka, Vijayawada, Andhra Pradesh 520013", phone: "09885544045", imgCard: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nocoft6ual-UFP4_1sOq6_pGG0Ld7jSzKcrcsP5Lpx5hM5adwv6qVTRJ8h0R12BiXwUSaNQYOxfX_OP2612Dh_FnwyFGlAKyVfGWY5R6_-0FwXLEWbeSF4nH0TyXwyF-xWPv6iU=s1360-w1360-h1020-rw", imgModal: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no0444rqJscKO51bSSH8Sul9rMjOCVVBA7s009Rfw7j_5D4YdN5ZdvcJ4x3UMdc1-wPKxmv98jc78A5RapHVgDl9A-uPwEu9zra1ZmGKsgTCb7HbC4mnGTqPONk4jbwipbYg3GpvA=s1360-w1360-h1020-rw", mapQuery: "Brundavan Nursery, Vijayawada" },
+        { id: 19, name: "Amma Nursery", owner: "Anushka", address: "Anu My Baby hospital, D Mart, opposite enikepadu, Enikepadu, Vijayawada, Andhra Pradesh 521108", phone: "0961814768", imgCard: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npg0tIaU0a0VauvDFHytxCrNL3QPqhb0RKIydCy3Cs4dR7Snw_o-w7XtJ2sgRb13MY_9UcRK8G-isCrac8BcNFq-kNcf2UCZWShoPPH_5DlPeA_i0Hmp-c7d6Uu85UBjC9uo8eQ=s1360-w1360-h1020-rw", imgModal: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq2y4Abaq-x-jTlSRq6LwZs0FlakGjDA3q6R0xx4pd0Zh_5q_IcSHVHpseARpiw6vsQ70aahwZha0z6ltcEEmNNEMvVx2aSv4S6jARxdO1Ou8VcwUMMF664-cAr0om8TrysvYQ6=s1360-w1360-h1020-rw", mapQuery: "Amma Nursery, Vijayawada" },
+        { id: 20, name: "Chandana Mohan Rao Nursery", owner: "Chandana Mohan Rao", address: "Kommadi Road, near Indian Oil Petrol Pump, Srinivasa Nagar, Madhurawada, Visakhapatnam, Andhra Pradesh 530041", phone: "08912728959", imgCard: "https://lh3.googleusercontent.com/p/AF1QipOzDtbRBCUugT1KdPxXiMIEnNhskdsI_bRqXD6c=s1360-w1360-h1020-rw", imgModal: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npl1dGqgdBZo6DJAoJJhh3tNPeJ7SYA5gIjjTJp5ANP6mOqvfj0wRoZGuIPazfGZBnLQA1rp5URHa8VaQqCt9nhOL0RTYq1F3WoT6eoShuOhkxDxS-3MgwDXyazf03DmLwmwPCA=s1360-w1360-h1020-rw", mapQuery: "Chandana Mohan Rao Nursery, Visakhapatnam" },
+        { id: 21, name: "Dr's House Plants", owner: "Surya mani", address: "Dr.no, 9-41-20, Pithapuram Colony, Maddilapalem, Visakhapatnam, Andhra Pradesh 530003", phone: "09441377204", imgCard: "https://content.jdmagicbox.com/comp/visakhapatnam/k4/0891px891.x891.220830145054.m6k4/catalogue/dr-s-house-plants-maddilapalem-visakhapatnam-plant-nurseries-5bq1jhy8pd-250.jpg", imgModal: "https://lh3.googleusercontent.com/p/AF1QipPH6tdT1C6_Sd23abDVMY22ucxmmnBL09bbqJ42=s1360-w1360-h1020-rw", mapQuery: "Dr's House Plants, Visakhapatnam" },
+        { id: 22, name: "Muralikrishna nursery", owner: "Muralikrishna", address: "Akini Avenue, Harinathpuram, Near Apollo Hospital, Savitri Nagar-524004, Nellore,AP", phone: "06305560983", imgCard: "https://5.imimg.com/data5/SELLER/Default/2024/8/439516764/HQ/NP/QQ/72947971/kinnu-nursery-plant-500x500.jpeg", imgModal: "https://lh3.googleusercontent.com/p/AF1QipO3yVffLjoFZmEBhBTEfvPcymwUigBxdj4gVY97=s1360-w1360-h1020-rw", mapQuery: "Muralikrishna nursery, Nellore" },
+        { id: 23, name: "Anantha Nursery", owner: "Anantha", address: "JNTU Rd, in front of sericulture office atp, Aravinda Nagar, Anantapur, Andhra Pradesh 515001", phone: "09704421170", imgCard: "https://content.jdmagicbox.com/comp/east_godavari/f4/9999pe883.e883.110313233141.n5f4/catalogue/anantha-sri-lakshmi-nursery-and-gardens-burilanka-east-godavari-plant-nurseries-6uc1w131hu.jpg", imgModal: "https://lh3.googleusercontent.com/p/AF1QipOI7_hcrRyTXEmpKgZ8Y6YMOgJIK4ja7WXDR1v1=s1360-w1360-h1020-rw", mapQuery: "Anantha Nursery, Anantapur" },
+        { id: 24, name: "Lucky Farm Nursery", owner: "Lucky", address: "Petrol Pump, 599 Near Suryanarayana Temple, Gooty Rd, opposite Kurnool, Andhra Pradesh 518002", phone: "09000009780", imgCard: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDDN8lg642nm2KWFh--r33ZqXOLpXSrlLVNw&s", imgModal: "https://lh3.googleusercontent.com/p/AF1QipMGpnYw0jy8D6Jv-P6raSJeR2QoyDsa8p3G-liW=s1360-w1360-h1020-rw", mapQuery: "Lucky Farm Nursery, Kurnool" },
+        { id: 25, name: "Plants and pots nursery", owner: "Lakshmi", address: "Ganesh nivas, Hno 42, kvr estate, Balaji Nagar, Vizianagaram, Andhra Pradesh 535004", phone: "07041203334", imgCard: "https://content.jdmagicbox.com/v2/comp/hyderabad/l7/040pxx40.xx40.240221160412.g9l7/catalogue/jk-farms-plant-nursery-mallepally-hyderabad-plant-nurseries-tzcal0u8mb.jpg", imgModal: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqb2CKA7MZPd6qR_2b4DwjIn3k9rulXjVE0vmIuEIMTA34xiG_pYYujJduvRLsqQHWo-JdBdd_aylgrnUNtQ9JQf6RqnkWTwHLDrP20ACj2tXFUv2sfxxBgQawMrp_s-1oNoVEoSw=s1360-w1360-h1020-rw", mapQuery: "Plants and pots nursery, Vizianagaram" },
+        { id: 26, name: "Pavithra nursery", owner: "Pavithra", address:"9-5-54/2/135, Shivaji Palem, Pithapuram Colony, Maddilapalem, Visakhapatnam, Andhra Pradesh 530013", phone: "07396269495",imgCard: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr5UyEpmFxMPJLQ082djv1bRJb106vuVDlaURSvntY26UnXfupKO1Gqwgfel9JpkZxsPRjx_WjiAGkCqbNtpEVuyNS7rlUG3DypvUKsTZsJZkPkH5FLZbd9ZZHVOhU8eQ2WlFU2=s1360-w1360-h1020-rw",imgModal:"https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr1CsAJZ-bClLrHV5mtzFGNZJ_GcwPrWPIA-rPbgrmnoAZD3MZPv-Q92sX9yOcXpzUhPvKbIOSSB9w_5ocGFR3YUQUdrGppx5ajriIBCwTxPIM8gxeAsI7B83L5LFI1HS2bUXOA=s1360-w1360-h1020-rw",mapQuery:"Pavithra Nursery, Vizag"},
+        { id: 27, name: "Green Twings",owner: "Rakesh",address:"Waltair Main Rd, Lawsons Bay Colony, Pedda Waltair, Visakhapatnam, Andhra Pradesh 530017",phone:"7589643879", imgCard:"https://content.jdmagicbox.com/v2/comp/hyderabad/m5/040pxx40.xx40.240408120158.e7m5/catalogue/wk9ectie348c4xn-44ih1md1wh.jpg", imgModal:"https://lh3.googleusercontent.com/p/AF1QipNzGhBNs0odQ8aiQ1lSlpSCcVh6UeyzjPyo7V8P=w408-h544-k-no",mapQuery:"Green Twings, Viazg"},
+        { id: 28, name: "Exotic Plants",owner:"Cherishma",address:"plot no. 25, Exotic Plants, Sagar Nagar, Visakhapatnam, Andhra Pradesh 530045",phone:"9456782133",imgCard:"https://images.jdmagicbox.com/comp/visakhapatnam/l5/0891px891.x891.221111013622.e4l5/catalogue/exotic-plants-visakhapatnam-plant-nurseries-b40hlhz2za.jpg",imgModal:"https://images.jdmagicbox.com/comp/visakhapatnam/l5/0891px891.x891.221111013622.e4l5/catalogue/exotic-plants-visakhapatnam-plant-nurseries-wselei5lg8.jpg",mapQuery:"Exotic plants,Vizag"},
+      ];
+      const nurseryGrid = document.getElementById('nursery-grid');
+      const modalContainer = document.getElementById('modal-container');
+      const searchBar = document.getElementById('search-bar');
+      function displayNurseries() {
+        nurseryGrid.innerHTML = '';
+        modalContainer.innerHTML = '';
+        nurseryData.forEach(nursery => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.setAttribute('data-id', nursery.id);
+          card.innerHTML = `
+            <img src="${nursery.imgCard}" alt="${nursery.name}" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">${nursery.name}</h3>
+              <p class="card-text">Owner: ${nursery.owner}</p>
+            </div>
+          `;
+          nurseryGrid.appendChild(card);
+          const modal = document.createElement('div');
+          modal.className = 'modal';
+          modal.id = 'modal-' + nursery.id;
+          modal.innerHTML = `
+            <div class="modal-content">
+              <img src="${nursery.imgModal}" alt="${nursery.name}" loading="lazy">
+              <h2>${nursery.name}</h2>
+              <p><strong>Owner:</strong> ${nursery.owner}</p>
+              <address>
+                <strong>Address:</strong><br>
+                ${nursery.address.replace(/,/g, ',<br>')}
+              </address>
+              <p><strong>Phone:</strong> ${nursery.phone}</p>
+              <div class="modal-buttons">
+                <a href="https://maps.google.com/?q=${encodeURIComponent(nursery.mapQuery)}" target="_blank" class="modal-map-link">📍 View on Google Maps</a>
+                <button class="modal-close-btn" data-id="${nursery.id}">Close</button>
+              </div>
+            </div>
+          `;
+          modalContainer.appendChild(modal);
+        });
+        addEventListeners();
+      }
+      function addEventListeners() {
+        searchBar.addEventListener('input', (e) => {
+          const searchTerm = e.target.value.toLowerCase();
+          const allCards = document.querySelectorAll('.card');
+          allCards.forEach(card => {
+            const cardTitle = card.querySelector('.card-title').textContent.toLowerCase();
+            if (cardTitle.includes(searchTerm)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+        nurseryGrid.addEventListener('click', (event) => {
+            const card = event.target.closest('.card');
+            if (card) {
+                const modalId = 'modal-' + card.getAttribute('data-id');
+                document.getElementById(modalId).style.display = 'flex';
+            }
+        });
+        modalContainer.addEventListener('click', (event) => {
+            if (event.target.classList.contains('modal-close-btn')) {
+                const modalId = 'modal-' + event.target.getAttribute('data-id');
+                document.getElementById(modalId).style.display = 'none';
+            }
+            if(event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        });
+      }
+      displayNurseries();
+    });
+  </script>
+</body>
+</html>
