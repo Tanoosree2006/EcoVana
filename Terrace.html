@@ -1,0 +1,648 @@
+<html>
+    <head>
+        <title>EcoVANA</title>
+        <link rel="stylesheet" href="./IndoorStyles.css">
+        <link rel="stylesheet" href="./HeaderStyles.css">
+        <link rel="stylesheet" href="./FooterStyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <Style>
+            html,body{
+                overflow: visible;
+            }
+        </Style>
+    </head>
+    <body>
+        <!---------- Header --------->
+        <div class="header">
+            <div class="header_logo">
+                <img src="./logo.jpg" alt="logo">
+            </div>
+            <div class="header_navLinks">
+                <a href="./Project/Project/homepage.html">Home</a>
+                <a href="./PlantsModified.html">Plants</a>
+                <a href="./Plant_care/rough.html">PlantCare</a>
+                <a href="./Essentials/project2/essentials.html">Essentials</a>
+                <a href="./NearByNursery/New folder/FinalNewNersery.html">Nearby Nurseries</a>
+                <a href="./Project/Project/demo.html">AI chatbot</a>
+            </div>
+            <div class="Cart_Login">
+                <a href="./Essentials/project2/cart.html"><i class="fa-solid fa-cart-shopping" style="color: #242020; font-size: 20px;"></i></a>
+                <a href="./LoginPage/LoginPage/mainlogin.html" class="Login_option"><i class="fa-solid fa-circle-user" style="color: #252628; font-size: 20px;"></i>
+                    <div class="Login_SignUp">Login</div>
+                </a>
+            </div>
+            <div class="header_side_bars">
+                <div class="header_bars" onclick="Open()">
+                    <i class="fa-solid fa-bars" style="color: #141010;"></i>
+                </div>
+                <div class="header_menu">
+                    <div class="cross" onclick="Close()">&times;</div>
+                    <div class="submenu"><a href="./Project/Project/homepage.html"><i class="fa-solid fa-house" style="color: #242629;"></i>&nbsp;Home</a></div>
+                    <div class="submenu"><a href="./PlantsModified.html"><i class="fa-solid fa-leaf" style="color: #272a2f;"></i>&nbsp;Plants</a></div>
+                    <div class="submenu"><a href="./Plant_care/rough.html"><i class="fa-solid fa-seedling" style="color: #2f343d;"></i>&nbsp;PlantCare</a></div>
+                    <div class="submenu"><a href="./Essentials/project2/essentials.html"><i class="fa-solid fa-mitten" style="color: #343941;"></i>&nbsp;Essentials</a></div>
+                    <div class="submenu"><a href="./NearByNursery/New folder/FinalNewNersery.html"><i class="fa-solid fa-location-dot" style="color: #303640;"></i>&nbsp;Nearby Nurseries</a></div>
+                    <div class="submenu"><a href="./Project/Project/demo.html"><i class="fa-solid fa-robot" style="color: #2e3238;"></i>&nbsp;AI chatbot</a></div>
+                    <div class="submenu"><a href="./Essentials/project2/cart.html"><i class="fa-solid fa-cart-shopping" style="color: #2a2d32;"></i>&nbsp;Cart</a></div>
+                    <div class="submenu"><a href="./LoginPage/LoginPage/mainlogin.html"><i class="fa-solid fa-circle-user" style="color: #343941;"></i>&nbsp;Login/Sign Up</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terrace plants  -->
+         <div class="Indoor_body">
+            <div class="Heading">Terrace Plants</div>
+            <div class="Indoor_grid">
+            <!-- First Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Bougainvillea.webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Bougainvillea</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Early Summer
+                        <br>
+                        A hardy climber with vibrant bracts that thrives in full sun and dry conditions; perfect for sunny terraces.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Bougainvillea" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images//Hibiscus.webp" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Hibiscus</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Fall
+                        <br>
+                        Produces large, colorful blooms that attract pollinators; needs full sunlight and regular watering.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Hibiscus" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Marigold.jpeg" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Marigold (Tagetes)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Late Winter to Spring
+                        <br>
+                        Grows well in pots with full sunlight; regular pruning and feeding encourage continuous blooming.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Tagetes" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Jasmine (Mogra).webp" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Jasmine (Mogra)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Strongly fragrant white flowers; needs sunlight and well-drained soil; blooms well in clay pots.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Jasminum_sambac" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Tomato.webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Tomato Plant</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Early Summer
+                        <br>
+                        The tomato plant is a sun-loving vegetable that grows easily in pots, needs full sun and regular feeding.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Tomato" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Brinjal (Eggplant).jpeg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Brinjal (Eggplant)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Brinjal grows well in large containers with proper support, needing full sunlight, regular watering, and occasional feeding.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Eggplant" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Bitter-Gourd.jpg" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3> Bitter Gourd (Karela)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Bitter gourd grows well in containers with a trellis and needs full sunlight and regular watering.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Momordica_charantia" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Bottle_Gourd.webp" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Bottle Gourd (Lauki)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Bottle gourd grows well in large containers with support and needs plenty of sunlight and regular watering.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Calabash" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Third Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Rose.jpeg" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Rose</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Late Winter to Spring
+                        <br>
+                        Grows well in pots with full sunlight; regular pruning and feeding encourage continuous blooming.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Rose" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Sunflower (Miniature).jpg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Sunflower (Miniature)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Miniature sunflower grows well in pots and needs full sunlight and regular watering to bloom brightly.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Common_sunflower" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Lavender.webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3> Lavender</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Early Summer
+                        <br>
+                        Lavender grows well in pots with well-drained soil and needs full sunlight and little watering.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Lavandula" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Rosemary.jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Rosemary</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Fragrant herb with needle-like leaves; drought-tolerant and ideal for sunny terraces.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Rosemary" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Fourth Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Mint (Pudina).jpg" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Mint (Pudina)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Mint grows well in pots, prefers partial sunlight, and needs moist soil with regular watering.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Mentha" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Coriander (Dhaniya).webp" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Coriander (Dhaniya)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter
+                        <br>
+                        Coriander grows well in containers, needs cool weather, moderate sunlight, and regular watering.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Coriander" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Basil (Tulsi).webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Basil (Tulsi / Sweet Basil)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Aromatic and sacred plant; prefers sunlight and daily watering; grows well in medium pots.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Ocimum_tenuiflorum" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images//Curry Leaf Plant.jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Curry Leaf Plant</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Aromatic leaves for cooking; needs full sunlight and space to grow; suitable for large pots.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Curry_tree" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Fidth Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Lemongrass.jpg" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Lemongrass</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        Grows tall in pots; used for herbal teas and cooking; needs full sunlight and regular trimming.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Cymbopogon" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Torenia (Wishbone Flower).webp" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Torenia (Wishbone Flower)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Late Spring to Early Summer
+                        <br>
+                        Torenia grows well in pots, prefers partial shade, and blooms beautifully with moist soil and regular watering.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Torenia" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Zinnia.webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Zinnia</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Zinnia grows well in pots with good drainage, needs full sunlight, and produces bright blooms with regular watering.
+                    </p>
+                    <a href="http://en.wikipedia.org/wiki/Zinnia" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Cockscomb (Celosia).jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Cockscomb (Celosia)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                         Summer
+                        <br>
+                         Grows well in sunny terrace pots; produces vibrant, velvety flowers shaped like a rooster’s comb and needs regular watering.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Celosia_argentea" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Sixth Row -->
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Okra (Lady Finger).webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Okra (Lady Finger)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Okra needs plenty of sunlight and space, and grows well in grow bags with harvest in about 50–60 days
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Okra" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Papaya (Dwarf Variety).jpg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Papaya (Dwarf Variety)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Suitable for large pots; grows quickly and produces fruit within 6–8 months in sunny areas.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Papaya" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Fenugreek (Methi).webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Fenugreek (Methi)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter
+                        <br>
+                        Grows easily from seeds; prefers cooler weather and shallow containers; nutrient-rich leaves.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Fenugreek" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Chili Plant.jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Chili Plant</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                         Summer
+                        <br>
+                        Chili plants grow well in pots with bright sun and light soil, and occasional pruning boosts overall yield.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Celosia_argentea" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Seventh Row  -->
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Periwinkle (Vinca).webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Periwinkle (Vinca)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer to Autumn
+                        <br>
+                        Hardy and drought-tolerant with pink, purple, or white flowers; perfect for hot, dry terraces.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Vinca" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Gaillardia (Blanket Flower).jpeg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Gaillardia (Blanket Flower)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer to Fall
+                        <br>
+                        Heat-loving plant with red-yellow daisy blooms; attracts butterflies.
+                    </p>
+                    <a href="https://simple.wikipedia.org/wiki/Gaillardia" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Calendula.webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Calendula</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter
+                        <br>
+                        Bright orange and yellow blooms; grows well in shallow pots and cool weather.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Calendula" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Capsicum (Bell Pepper).jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Capsicum (Bell Pepper)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Colorful fruits grow well in medium pots with 6–8 hours of sun.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Hypoestes_phyllostachya" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+
+            <!-- Eigth row -->
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Radish.jpg" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Radish</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter
+                        <br>
+                        Fast-growing root vegetable; perfect for shallow containers in cool climates.
+                    </p>
+                    <a href="http://en.wikipedia.org/wiki/Radish" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Carrot.avif" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Carrot</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter
+                        <br>
+                         Needs deep pots with loose soil; ready to harvest in 60–75 days.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Carrot" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Beetroot.jpg" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Beetroot</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter
+                        <br>
+                        Vibrant root vegetable that thrives in containers; prefers cool conditions.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Beetroot" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Thyme.jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Thyme</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        Low-growing aromatic herb; drought-resistant and great for borders.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Thyme" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Ninth Row  -->
+             <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Oregano.jpg" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Oregano</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Popular culinary herb with small leaves; grows well in full sun and light soil.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Oregano" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Passion Flower (Krishna Kamal).webp" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Passion Flower (Krishna Kamal)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Exotic flowering vine that attracts bees; needs support and full sun.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Passiflora" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Sedum (Stonecrop).webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Sedum (Stonecrop)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Drought-tolerant succulent that’s ideal for sunny terrace trays and pots.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Sedum" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Canna Lily.webp" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Canna Lily</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Tall plant with vibrant tropical blooms; grows well in sun with regular watering.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Canna_(plant)" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+        </div>
+         <div class="load_more_container button1">
+            <span class="ClickButton1" onclick="LoadMore1()">Load More</span>
+        </div>
+        <div class="load_more_container button2">
+            <span class="ClickButton2" onclick="LoadMore2()">Load More</span>
+        </div>
+        </div>
+
+         <footer class="footer">
+           <div class="footer_top">
+                <div class="footer_about">
+                    <h2>EcoVANA</h2>
+                    <p>EcoVANA empowers plant lovers to transform <br>their homes into green spaces with ease and joy. <br>Join the eco-movement today!</p>
+                </div>
+
+                <div class="footer_contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@ecovana.com</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+                </div> 
+                <div class="follow_us">
+                    <h3>Follow Us</h3>
+                    <div class="social_media">
+                        <i class="fa-lg fa-brands fa-instagram"></i>
+                        <i class="fa-lg fa-brands fa-twitter"></i>
+                        <i class="fa-lg fa-brands fa-youtube"></i>
+                        <i class="fa-lg fa-brands fa-facebook"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <hr>
+                <br>
+                <div class="copy_right">
+                    <p>&copy; 2025 EcoVANA. All rights reserved.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made with❤️</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            function LoadMore1(){
+                const hiddenCards = document.querySelectorAll(".hidden1_content");
+                hiddenCards.forEach(card => {
+                    card.style.display = "block";
+                });
+                document.querySelector(".button1").style.display = "none";
+                document.querySelector(".button2").style.display = "flex";
+            }
+
+            function LoadMore2(){
+                const hiddenCards = document.querySelectorAll(".hidden2_content");
+                hiddenCards.forEach(card => {
+                    card.style.display = "block";
+                });
+                document.querySelector(".button2").style.display = "none";
+            }
+            function Open(){
+                document.getElementsByClassName("header_menu")[0].style="right:0px; top:-45px;";
+            }
+            function Close(){
+                document.getElementsByClassName("header_menu")[0].style="right:-250px; top:-45px";
+            }
+        </script>
+    </body>
+</html>

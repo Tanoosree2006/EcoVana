@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+    height: 100svh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+.garden-card {
+  width: 300px;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  animation: floatUp 0.7s ease forwards;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+a{
+    color: black;
+    padding: 10px;
+}
+.Title_Heading{
+    margin-bottom: 1rem;
+}
+.garden-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+.garden-card img {
+  width: 60%;
+  height: auto;
+  max-height: 200px; 
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+@keyframes floatUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.garden-card img {
+  width: 60%;
+  height: auto;
+  max-height: 200px; 
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  animation: floatTilt 4s ease-in-out infinite;
+}
+.garden-card:hover img {
+  animation: hoverRotate 0.2s linear forwards;
+}
+@keyframes floatTilt {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+}
+@keyframes hoverRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(2deg); 
+  }
+}
+@media (max-width: 425px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 1rem;
+  }
+
+  .garden-card {
+    height: auto;
+    width: 90%;
+    padding: 1rem;
+    margin: 0 auto 1rem auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .garden-card img {
+    width: 80%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+  }
+  .garden-card h2 {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .garden-card p {
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+
+  .Title_Heading {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .Title_about {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+}
+@media (max-width: 376px) {
+  .garden-card {
+    width: 80%;
+    margin: 5px; 
+  }
+
+  .garden-card img {
+    width: 70%;
+    max-height: 80px;
+  }
+
+  .garden-card h2 {
+    font-size: 0.95rem;
+  }
+
+  .garden-card p {
+    font-size: 0.8rem;
+  }
+  .Home_title p{
+    line-height: 22px;
+  }
+}
+@media(max-width:320px){
+  .garden-card{
+    margin:1px;
+  }
+}

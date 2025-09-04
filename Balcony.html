@@ -1,0 +1,653 @@
+<html>
+    <head>
+        <title>EcoVANA</title>
+        <link rel="stylesheet" href="./IndoorStyles.css">
+        <link rel="stylesheet" href="./HeaderStyles.css">
+        <link rel="stylesheet" href="./FooterStyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+        <style>
+            html, body{
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!---------- Header --------->
+        <div class="header">
+            <div class="header_logo">
+                <img src="./logo.jpg" alt="logo">
+            </div>
+            <div class="header_navLinks">
+                <a href="./Project/Project/homepage.html">Home</a>
+                <a href="./PlantsModified.html">Plants</a>
+                <a href="./Plant_care/rough.html">PlantCare</a>
+                <a href="./Essentials/project2/essentials.html">Essentials</a>
+                <a href="./NearByNursery/New folder/FinalNewNersery.html">Nearby Nurseries</a>
+                <a href="./Project/Project/demo.html">AI chatbot</a>
+            </div>
+            <div class="Cart_Login">
+                <a href="./Essentials/project2/cart.html"><i class="fa-solid fa-cart-shopping" style="color: #242020; font-size: 20px;"></i></a>
+                <a href="./LoginPage/LoginPage/mainlogin.html" class="Login_option"><i class="fa-solid fa-circle-user" style="color: #252628; font-size: 20px;"></i>
+                    <div class="Login_SignUp">Login</div>
+                </a>
+            </div>
+            <div class="header_side_bars">
+                <div class="header_bars" onclick="Open()">
+                    <i class="fa-solid fa-bars" style="color: #141010;"></i>
+                </div>
+                <div class="header_menu">
+                    <div class="cross" onclick="Close()">&times;</div>
+                    <div class="submenu"><a href="./Project/Project/homepage.html"><i class="fa-solid fa-house" style="color: #242629;"></i>&nbsp;Home</a></div>
+                    <div class="submenu"><a href="./PlantsModified.html"><i class="fa-solid fa-leaf" style="color: #272a2f;"></i>&nbsp;Plants</a></div>
+                    <div class="submenu"><a href="./Plant_care/rough.html"><i class="fa-solid fa-seedling" style="color: #2f343d;"></i>&nbsp;PlantCare</a></div>
+                    <div class="submenu"><a href="./Essentials/project2/essentials.html"><i class="fa-solid fa-mitten" style="color: #343941;"></i>&nbsp;Essentials</a></div>
+                    <div class="submenu"><a href="./NearByNursery/New folder/FinalNewNersery.html"><i class="fa-solid fa-location-dot" style="color: #303640;"></i>&nbsp;Nearby Nurseries</a></div>
+                    <div class="submenu"><a href="./Project/Project/demo.html"><i class="fa-solid fa-robot" style="color: #2e3238;"></i>&nbsp;AI chatbot</a></div>
+                    <div class="submenu"><a href="./Essentials/project2/cart.html"><i class="fa-solid fa-cart-shopping" style="color: #2a2d32;"></i>&nbsp;Cart</a></div>
+                    <div class="submenu"><a href="./LoginPage/LoginPage/mainlogin.html"><i class="fa-solid fa-circle-user" style="color: #343941;"></i>&nbsp;Login/Sign Up</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terrace plants  -->
+         <div class="Indoor_body">
+            <div class="Heading">Balcony Plants</div>
+            <div class="Indoor_grid">
+                <!-- First Row -->
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Portulaca (Moss Rose).png" alt="Peace Lily">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Portulaca (Moss Rose)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Summer
+                            <br>
+                            Portulaca is a low-growing, drought-tolerant plant with bright blooms that thrives in hot, sunny spots.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Portulaca_grandiflora" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Geranium.webp" alt="Zamioculcas zamiifolia">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Geranium (Zonal or Ivy)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Summer
+                            <br>
+                            Works great in window boxes and balcony railings; needs 4–6 hours of direct sun and light care.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Geranium" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Pansy.webp" alt="Snake Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Pansy</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter
+                            <br>
+                            Grows well in cool weather; ideal for balcony baskets or window boxes with morning light.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Pansy" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Dianthus.webp" alt="Spider Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Dianthus</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter to Spring
+                            <br>
+                            Small, fragrant flowers that bloom in edge planters; needs partial sun and cool breeze.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Dianthus" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+
+                <!-- Second Row -->
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Alyssum.webp" alt="Peace Lily">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Alyssum</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter to Spring
+                            <br>
+                            Tiny, fragrant flowers that cascade beautifully in hanging or railing balcony pots under sun.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Alyssum" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Nasturtium (Compact Variety).jpg" alt="Zamioculcas zamiifolia">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Nasturtium (Compact Variety)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter to Spring
+                            <br>
+                            Edible flowers and leaves; ideal for trailing over railing planters in cool balcony spots.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Tropaeolum" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Strawberry Plant (Compact).jpg" alt="Snake Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Strawberry Plant (Compact)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter to Early Spring
+                            <br>
+                            This varient grows neatly in hanging baskets or pots; enjoys sun and moist, well-aerated soil.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Strawberry" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Petunia.webp" alt="Spider Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Petunia</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter to Spring
+                            <br>
+                            Ideal for railing planters; thrives in daily sun and benefits from regular deadheading to boost vibrant blooms.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Petunia" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+
+                <!-- Third Row -->
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Begonia.webp" alt="Peace Lily">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Begonia</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Fall
+                            <br>
+                            A perfect choice for shaded balconies; loves moist, well-drained soil and humid air conditions.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Begonia" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Chives.jpg" alt="Zamioculcas zamiifolia">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Chives</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring
+                            <br>
+                            Grows well in sunny balcony pots; useful edible herb with thin, grass-like leaves.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Chives" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Calendula (Pot Marigold).webp" alt="Snake Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Calendula (Pot Marigold)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter
+                            <br>
+                            Thrives in sunny balcony tubs; blooms attract pollinators and repel common pests.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Calendula_officinalis" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Parsley.jpeg" alt="Spider Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Parsley</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Early Summer
+                            <br>
+                            Grows well in small containers; prefers light shade and needs moist soil to stay lush.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Parsley" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+
+                <!-- Fourth Row -->
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Lobelia.jpg" alt="Peace Lily">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Lobelia</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter to Spring
+                            <br>
+                            Produces trailing blue or white blooms; perfect for hanging balcony baskets with bright light.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Lobelia" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Morning Glory (Compact).jpg" alt="Zamioculcas zamiifolia">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Morning Glory</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Summer
+                            <br>
+                            Great for vertical balcony spaces; requires morning sun and light support for climbing.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Morning_glory" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Ornamental Peppers.jpg" alt="Snake Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Ornamental Peppers</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Summer
+                            <br>
+                            Compact, colorful, and easy to maintain in small balcony pots with full sun.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Capsicum_annuum" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Sweet Alyssum (Lobularia).jpg" alt="Spider Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Sweet Alyssum (Lobularia)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter to Spring
+                            <br>
+                            Tiny, fragrant blooms that spill over balcony pots; grows well in cool weather with light sun.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Lobularia_maritima" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+
+                <!-- Fifth Row -->
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Viola.webp" alt="Peace Lily">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Viola</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter
+                            <br>
+                            Compact, cheerful flowers that flourish in balcony boxes or pots during cool winters with partial sunlight.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Viola_(plant)" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Phlox (Annual Dwarf).jpg" alt="Zamioculcas zamiifolia">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Phlox (Annual Dwarf)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Summer
+                            <br>
+                            Forms colorful flower mounds in balcony planters; enjoys full to partial sun and warm air.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Phlox" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Brachycome (Swan River Daisy).jpg" alt="Snake Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Brachycome (Swan River Daisy)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter to Spring
+                            <br>
+                            A small, floriferous plant perfect for shallow balcony pots with morning sun and cool air.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Brachyscome_iberidifolia" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Verbena.webp" alt="Spider Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Verbena</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Summer
+                            <br>
+                            Trailing blooms in vibrant shades that love warm weather and spill beautifully from hanging pots.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Verbena" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+
+                <!-- Sixth Row -->
+                <div class="Plant_card hidden1_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Coleus.webp" alt="Peace Lily">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Coleus</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Fall
+                            <br>
+                            Known for its vibrant and colorful foliage; thrives in partial shade and moist, well-drained soil.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Coleus" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card hidden1_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Impatiens (Busy Lizzie).jpg" alt="Zamioculcas zamiifolia">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Impatiens (Busy Lizzie)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Early Fall
+                            <br>
+                            Shade-loving flowering plant with pastel blooms; ideal for north-facing balconies with indirect light.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Impatiens_walleriana" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card hidden1_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Fuchsia.jpg" alt="Snake Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Fuchsia</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Summer
+                            <br>
+                            Gorgeous drooping blooms in pinks and purples; prefers morning sun and cooler shaded afternoons.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Fuchsia" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card hidden1_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Succulents (Mixed Varieties).jpg" alt="Spider Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Succulents (Mixed Varieties)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Summer
+                            <br>
+                             Require very little water and love the sun; ideal for balcony trays, mini pots, and railing boxes.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Succulent_plant" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+
+                <!-- Seventh Row  -->
+                <div class="Plant_card hidden1_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Ixora Dwarf.webp" alt="Peace Lily">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Ixora Dwarf</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Summer
+                            <br>
+                            Compact shrub with clusters of red, orange, or yellow flowers; prefers sun and regular watering.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Ixora" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card hidden1_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Chinese Evergreen (Aglaonema).webp" alt="Zamioculcas zamiifolia">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Chinese Evergreen (Aglaonema)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Year-Round
+                            <br>
+                            Low-light foliage plant that thrives in shady balconies; perfect for tropical humidity.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Aglaonema" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                
+                <div class="Plant_card hidden1_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Creeping Jenny (Lysimachia).webp" alt="Snake Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Creeping Jenny (Lysimachia)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Summer
+                            <br>
+                            Fast-spreading ground cover with trailing yellow-green leaves; ideal for edge pots and hangers.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Lysimachia_nummularia" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card hidden1_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Dusty Miller (Senecio cineraria).jpg" alt="Spider Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Dusty Miller (Senecio cineraria)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter to Spring
+                            <br>
+                            Grown for its silvery foliage; pairs beautifully with flowering plants in balcony pots or borders.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Centaurea_cineraria" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+
+
+                <!-- Eigth row -->
+                <div class="Plant_card hidden2_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Coral Bells (Heuchera).webp" alt="Peace Lily">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Coral Bells (Heuchera)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Fall
+                            <br>
+                            Stunning foliage in red, purple, or bronze tones; perfect for shaded balcony containers.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Heuchera" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card hidden2_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Mexican Heather (Cuphea).webp" alt="Zamioculcas zamiifolia">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Mexican Heather (Cuphea)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Fall
+                            <br>
+                            A low-maintenance flowering shrub with tiny purple blooms and fine foliage; loves sun.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Cuphea_hyssopifolia" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                
+                <div class="Plant_card hidden2_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Golden Duranta.jpg" alt="Snake Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Golden Duranta</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Summer
+                            <br>
+                            Ornamental plant with golden-yellow leaves; provides contrast in balcony pots and hedges.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Duranta" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card hidden2_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Helichrysum (Strawflower).webp" alt="Spider Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Helichrysum (Strawflower)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Summer
+                            <br>
+                            Produces papery flowers that last long; thrives in full sun and well-drained containers.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Xerochrysum_bracteatum" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+
+                <!-- Ninth Row  -->
+                <div class="Plant_card hidden2_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Plumbago (Compact Variety).webp" alt="Peace Lily">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Plumbago (Compact Variety)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Summer to Fall
+                            <br>
+                            Sky-blue flowers that cascade well from planters; enjoys sunny, airy balconies.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Plumbago" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card hidden2_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Echeveria (Rosette Succulent).jpg" alt="Zamioculcas zamiifolia">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Echeveria (Rosette Succulent)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Spring to Summer
+                            <br>
+                            Stunning rosette-shaped succulent; loves dry balcony corners with lots of sunlight.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Echeveria" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                
+                <div class="Plant_card hidden2_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Cineraria.jpg" alt="Snake Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Cineraria</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Winter
+                            <br>
+                            Cool-season flowering plant with cheerful, daisy-like blooms in mixed shades; ideal for partially shaded balconies.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Cineraria" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+                <div class="Plant_card hidden2_content">
+                    <div class="Indoor_Plant">
+                        <img src="./Images/Crown of Thorns (Euphorbia milii).webp" alt="Spider Plant">
+                    </div>
+                    <div class="Plant_Matter">
+                        <h3>Crown of Thorns (Euphorbia milii)</h3>
+                        <p><b>Season:&nbsp;&nbsp;</b>
+                            Year-Round
+                            <br>
+                             A spiny succulent with small, colorful flowers; does well in sunny balcony pots with minimal care.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Canna_(plant)" target="_blank">Wikipedia</a>
+                    </div>
+                </div>
+            </div>
+            <div class="load_more_container button1">
+                <span class="ClickButton1" onclick="LoadMore1()">Load More</span>
+            </div>
+            <div class="load_more_container button2">
+                <span class="ClickButton2" onclick="LoadMore2()">Load More</span>
+            </div>
+            
+        </div>
+        
+        <footer class="footer">
+           <div class="footer_top">
+                <div class="footer_about">
+                    <h2>EcoVANA</h2>
+                    <p>EcoVANA empowers plant lovers to transform <br>their homes into green spaces with ease and joy. <br>Join the eco-movement today!</p>
+                </div>
+
+                <div class="footer_contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@ecovana.com</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+                </div> 
+                <div class="follow_us">
+                    <h3>Follow Us</h3>
+                    <div class="social_media">
+                        <i class="fa-lg fa-brands fa-instagram"></i>
+                        <i class="fa-lg fa-brands fa-twitter"></i>
+                        <i class="fa-lg fa-brands fa-youtube"></i>
+                        <i class="fa-lg fa-brands fa-facebook"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <hr>
+                <br>
+                <div class="copy_right">
+                    <p>&copy; 2025 EcoVANA. All rights reserved.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made with❤️</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            function LoadMore1(){
+                const hiddenCards = document.querySelectorAll(".hidden1_content");
+                hiddenCards.forEach(card => {
+                    card.style.display = "block";
+                });
+                document.querySelector(".button1").style.display = "none";
+                document.querySelector(".button2").style.display = "flex";
+            }
+
+            function LoadMore2(){
+                const hiddenCards = document.querySelectorAll(".hidden2_content");
+                hiddenCards.forEach(card => {
+                    card.style.display = "block";
+                });
+                document.querySelector(".button2").style.display = "none";
+            }
+            function Open(){
+                document.getElementsByClassName("header_menu")[0].style="right:0px; top:-45px;";
+            }
+            function Close(){
+                document.getElementsByClassName("header_menu")[0].style="right:-250px; top:-45px";
+            }
+        </script>
+    </body>
+</html>

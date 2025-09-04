@@ -1,0 +1,651 @@
+<html>
+    <head>
+        <title>EcoVANA</title>
+        <link rel="stylesheet" href="./IndoorStyles.css">
+        <link rel="stylesheet" href="./HeaderStyles.css">
+        <link rel="stylesheet" href="./FooterStyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        body,html{
+            overflow: visible;
+        }
+    </style>
+    <body>
+        <!---------- Header --------->
+        <div class="header">
+            <div class="header_logo">
+                <img src="./logo.jpg" alt="logo">
+            </div>
+            <div class="header_navLinks">
+                <a href="./Project/Project/homepage.html">Home</a>
+                <a href="./PlantsModified.html">Plants</a>
+                <a href="./Plant_care/rough.html">PlantCare</a>
+                <a href="./Essentials/project2/essentials.html">Essentials</a>
+                <a href="./NearByNursery/New folder/FinalNewNersery.html">Nearby Nurseries</a>
+                <a href="./Project/Project/demo.html">AI chatbot</a>
+            </div>
+            <div class="Cart_Login">
+                <a href="./Essentials/project2/cart.html"><i class="fa-solid fa-cart-shopping" style="color: #242020; font-size: 20px;"></i></a>
+                <a href="./LoginPage/LoginPage/mainlogin.html" class="Login_option"><i class="fa-solid fa-circle-user" style="color: #252628; font-size: 20px;"></i>
+                    <div class="Login_SignUp">Login</div>
+                </a>
+            </div>
+            <div class="header_side_bars">
+                <div class="header_bars" onclick="Open()">
+                    <i class="fa-solid fa-bars" style="color: #141010;"></i>
+                </div>
+                <div class="header_menu">
+                    <div class="cross" onclick="Close()">&times;</div>
+                    <div class="submenu"><a href="./Project/Project/homepage.html"><i class="fa-solid fa-house" style="color: #242629;"></i>&nbsp;Home</a></div>
+                    <div class="submenu"><a href="./PlantsModified.html"><i class="fa-solid fa-leaf" style="color: #272a2f;"></i>&nbsp;Plants</a></div>
+                    <div class="submenu"><a href="./Plant_care/rough.html"><i class="fa-solid fa-seedling" style="color: #2f343d;"></i>&nbsp;PlantCare</a></div>
+                    <div class="submenu"><a href="./Essentials/project2/essentials.html"><i class="fa-solid fa-mitten" style="color: #343941;"></i>&nbsp;Essentials</a></div>
+                    <div class="submenu"><a href="./NearByNursery/New folder/FinalNewNersery.html"><i class="fa-solid fa-location-dot" style="color: #303640;"></i>&nbsp;Nearby Nurseries</a></div>
+                    <div class="submenu"><a href="./Project/Project/demo.html"><i class="fa-solid fa-robot" style="color: #2e3238;"></i>&nbsp;AI chatbot</a></div>
+                    <div class="submenu"><a href="./Essentials/project2/cart.html"><i class="fa-solid fa-cart-shopping" style="color: #2a2d32;"></i>&nbsp;Cart</a></div>
+                    <div class="submenu"><a href="./LoginPage/LoginPage/mainlogin.html"><i class="fa-solid fa-circle-user" style="color: #343941;"></i>&nbsp;Login/Sign Up</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Indoor_body">
+            <div class="Heading">Indoor Plants</div>
+        <!------------ Plants ------------>
+        <div class="Indoor_grid">
+            <!-- First Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Peace_lily.webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Peace Lilly(Spathiphyllum)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Fall
+                        <br>
+                        Known for its white flowers and air-purifying qualities. Prefers indirect light and moist, not soggy, soil.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Spathiphyllum" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Zamioculcas_zamiifolia.jpg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>ZZ Plant(Zamioculcas zamiifolia)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        ZZ Plant is low-maintenance with shiny green leaves, perfect for low light. It’s drought-tolerant and ideal for beginners.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Zamioculcas" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Snake_plant.webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Snake Plant (Sansevieria)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        A low-maintenance succulent that survives in low light and requires little water. It purifies air and is ideal for bedrooms or offices.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Dracaena_trifasciata" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Spider_plant.webp" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Spider Plant (Chlorophytum comosum)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                         Produces baby offshoots and purifies air. Adapts well to various light conditions.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Chlorophytum_comosum" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Aloe_vera.webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Aloe Vera</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Aloe Vera is a succulent plant known for its healing gel and minimal water needs.It needs bright light and little water.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Aloe_vera" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Money_plant.webp" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Pothos (Money Plant)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        All Year (Tropical)
+                        <br>
+                        Easy to grow in water or soil, this trailing vine tolerates low light and is perfect for shelves and hanging pots.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Epipremnum_aureum" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Areca_palm.webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Areca Palm</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Late Spring to Early Summer
+                        <br>
+                        A graceful palm with soft, feathery fronds that love bright filtered light and add tropical vibes indoors.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Areca" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Rubber_plant.webp" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Rubber Plant (Ficus elastica)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        A tall, bold-leaved plant that thrives in bright spaces; needs moderate watering and grows upright with ease.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Ficus_elastica" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Third Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Fiddle_leaf.webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Fiddle Leaf Fig (Ficus lyrata)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        With large violin-shaped leaves, it makes a bold decor statement but dislikes movement and inconsistent care.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Ficus_lyrata" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Chinese_evergreen.webp" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Chinese Evergreen (Aglaonema)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Early Summer
+                        <br>
+                        Chinese Evergreen is a colorful, low-maintenance plant that thrives in low light and adds beauty to any space.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Aglaonema" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Philodendron.webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Philodendron</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Available in many types, it thrives in bright, indirect light and is loved for its ease of growth and propagation.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Philodendron" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Dracaena.webp" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Dracaena</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Dracaena is an easy-care plant with striking striped leaves that thrives in low to moderate light.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Dracaena_(plant)" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Fourth Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Parlor_palm.webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Parlor Palm (Chamaedorea elegans)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        A compact, elegant palm that does well in low light and humid corners of the home.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Chamaedorea_elegans" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Calathea_plant.jpg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Calathea</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Calathea is known for its beautifully patterned leaves that move with the light and enjoy high humidity.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Calathea" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images//Dieffenbachia_plant.jpg" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Dieffenbachia (Dumb Cane)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        Dieffenbachia has bold, patterned leaves and thrives in indirect light, but it's toxic to pets and kids.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Dieffenbachia" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Peperomia.webp" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Peperomia</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Early Summer
+                        <br>
+                        Small, pet-safe plant that enjoys moderate light and requires minimal care.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Peperomia" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Fifth Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Boston_fern.jpg" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Boston Fern</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        Lush, arching fronds that love humidity, making them ideal for bathrooms or misted spaces.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Nephrolepis_exaltata" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Prayer_plant.jpg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Prayer Plant (Maranta leuconeura)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Named for its folding leaves at night; thrives in warmth, indirect light, and moisture.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Calathea" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images//Lucky_Bamboo.webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Lucky Bamboo (Dracaena sanderiana)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        A symbol of good fortune that grows in water or soil with minimal care and medium light.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Dracaena_sanderiana" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/BirdsNest_fern.webp" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Bird's Nest Fern</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Unfurling fronds from the center and a love for humidity make it perfect for shaded, steamy spots.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Asplenium_nidus" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Sixth Row -->
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Croton.webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Croton</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Late Spring to Summer
+                        <br>
+                        Croton is a bold foliage in reds and yellows that need strong light to maintain their dramatic colors.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Codiaeum_variegatum" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Oxalis_plant.webp" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Oxalis (Purple Shamrock)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        Eye-catching purple leaves that open in sunlight and close at night, with delicate blooms.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Oxalis_triangularis" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Jade_plant.webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Jade Plant (Crassula ovata)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Jade Plant is a popular succulent with thick, glossy leaves that store water and is often seen as a symbol of good luck and prosperity.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Crassula_ovata" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/maidenhair-fern.webp" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Maidenhair Fern</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Early Summer
+                        <br>
+                        Maidenhair Fern is a delicate fern with lacy, airy fronds that thrives in humid, shaded environments.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Adiantum" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <!-- Seventh Row  -->
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Schefflera (Umbrella Plant).webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Schefflera (Umbrella Plant)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Fall
+                        <br>
+                        Tall with umbrella-shaped leaf clusters, it thrives in bright, indirect light.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Schefflera" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Hoya (Wax Plant).jpg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Hoya (Wax Plant)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        A vining plant with thick, glossy leaves and fragrant, star-shaped flowers.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Hoya_(plant)" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Nerve Plant (Fittonia).png" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Nerve Plant (Fittonia)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        Small and vibrant, with colorful leaf veins that pop in terrariums or low light.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Fittonia" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Polka Dot Plant (Hypoestes phyllostachya).jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Polka Dot Plant (Hypoestes phyllostachya)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        A playful plant with dotted leaves in pink, red, or white tones.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Hypoestes_phyllostachya" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+
+            <!-- Eigth row -->
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Norfolk Island Pine.jpg" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Norfolk Island Pine</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter to Spring
+                        <br>
+                        A soft-needled, miniature pine tree that loves bright light and adds a festive touch indoors.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Araucaria_heterophylla" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Ponytail Palm (Beaucarnea recurvata).webp" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Ponytail Palm (Beaucarnea recurvata)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        A drought-tolerant plant with a bulbous base and long, curling leaves that store water.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Beaucarnea_recurvata" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Cast Iron Plant (Aspidistra elatior).jpg" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Cast Iron Plant (Aspidistra elatior)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        Almost unkillable, it survives neglect, low light, and temperature changes easily.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Aspidistra_elatior" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Rattlesnake Plant (Calathea lancifolia).jpeg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Rattlesnake Plant (Calathea lancifolia)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Features long wavy leaves with bold spots and loves indirect light and humidity.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Goeppertia_insignis" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Ninth Row  -->
+             <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/String of Pearls (Senecio rowleyanus).jpg" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>String of Pearls (Senecio rowleyanus)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Early Fall
+                        <br>
+                        A trailing succulent with bead-like leaves that loves bright light and good drainage.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Curio_rowleyanus" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Fishbone Cactus (Epiphyllum anguliger).jpg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Fishbone Cactus (Epiphyllum anguliger)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Quirky cactus with zigzag leaves that blooms at night with scented flowers.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Disocactus_anguliger" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Pilea Peperomioides (Chinese Money Plant).jpg" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3> Pilea Peperomioides (Chinese Money Plant)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                         Round, coin-shaped leaves on upright stems; fast-growing and easy to propagate.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Pilea_peperomioides" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/African Violet (Saintpaulia).jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>African Violet (Saintpaulia)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Year-Round (indoors)
+                        <br>
+                        Fuzzy-leaved flowering plant that blooms in low light with proper care.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Streptocarpus_sect._Saintpaulia" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+        </div>
+        <div class="load_more_container button1">
+            <span class="ClickButton1" onclick="LoadMore1()">Load More</span>
+        </div>
+        <div class="load_more_container button2">
+            <span class="ClickButton2" onclick="LoadMore2()">Load More</span>
+        </div>
+        
+        <footer class="footer">
+           <div class="footer_top">
+                <div class="footer_about">
+                    <h2>EcoVANA</h2>
+                    <p>EcoVANA empowers plant lovers to transform <br>their homes into green spaces with ease and joy. <br>Join the eco-movement today!</p>
+                </div>
+
+                <div class="footer_contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@ecovana.com</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+                </div> 
+                <div class="follow_us">
+                    <h3>Follow Us</h3>
+                    <div class="social_media">
+                        <i class="fa-lg fa-brands fa-instagram"></i>
+                        <i class="fa-lg fa-brands fa-twitter"></i>
+                        <i class="fa-lg fa-brands fa-youtube"></i>
+                        <i class="fa-lg fa-brands fa-facebook"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <hr>
+                <br>
+                <div class="copy_right">
+                    <p>&copy; 2025 EcoVANA. All rights reserved.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made with❤️</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            function LoadMore1(){
+                const hiddenCards = document.querySelectorAll(".hidden1_content");
+                hiddenCards.forEach(card => {
+                    card.style.display = "block";
+                });
+                document.querySelector(".button1").style.display = "none";
+                document.querySelector(".button2").style.display = "flex";
+            }
+
+            function LoadMore2(){
+                const hiddenCards = document.querySelectorAll(".hidden2_content");
+                hiddenCards.forEach(card => {
+                    card.style.display = "block";
+                });
+                document.querySelector(".button2").style.display = "none";
+            }
+            function Open(){
+                document.getElementsByClassName("header_menu")[0].style="right:0px; top:-45px;";
+            }
+            function Close(){
+                document.getElementsByClassName("header_menu")[0].style="right:-250px; top:-45px";
+            }
+        </script>
+
+    </body>
+</html>

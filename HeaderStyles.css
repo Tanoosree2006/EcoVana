@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+html, body{
+    overflow: hidden;
+}
+.header_logo img{
+    height: 90px;
+}
+.header{
+    width: 100%;
+    background-color: #c3e9c2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.Cart_Login{
+    position: relative;
+    margin-right: 0.5%;
+}
+.header_navLinks a, .Cart_Login a{
+    font-size: 17px;
+    color: black;
+    padding: 10px 8px;
+}
+.header_navLinks a{
+    margin: 12px;
+}
+.header_navLinks a:hover{
+    background-color: #5C4033;
+    color: white;
+    border-radius:10px;
+}
+.Login_option{
+    position: relative;
+    display: inline-block;
+}
+.Login_SignUp{
+    display: none;
+    position: absolute;
+    top: 75%; 
+    left: 40%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+.Login_option:hover .Login_SignUp{
+    display: block;
+}
+.header_side_bars{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.header_bars{
+    padding: 10px;
+    cursor: pointer;
+}
+.header_menu{
+    position: absolute;
+    width: 250px;
+    height: 100vh;
+    top: 30px;
+    right: -250px;
+    transition: right 1s ease;
+    background-color: #CDEAC0;
+    display: block;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.submenu{
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom: 1px solid #5C4033;
+    cursor: pointer; 
+}
+.submenu a{
+    padding-left: 10px;
+    color: black;
+}
+.submenu:hover{
+    background-color: #5C4033;
+    color: white;
+}
+.submenu:hover a{
+    color: white;
+    text-shadow: 1px 2px 4px grey;
+}
+.cross {
+    font-size: 35px;
+    color: black;
+    width: fit-content;
+    font-style: bold;
+    padding: 4px 10px;
+    cursor: pointer;
+    margin-top: 12px;
+    border-radius: 3px;
+}
+.cross:hover{
+    background-color: red;
+    color: white;
+}
+@media (min-width: 1010px){
+    .header_side_bars{
+        display: none;
+    }
+}
+@media (max-width: 1010px) {
+    .header_navLinks, .Cart_Login{
+        display: none;
+    }
+    .header_side_bars {
+        display: flex;
+    }
+}

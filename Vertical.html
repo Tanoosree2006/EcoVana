@@ -1,0 +1,660 @@
+<html>
+    <head>
+        <title>EcoVANA</title>
+        <link rel="stylesheet" href="./IndoorStyles.css">
+        <link rel="stylesheet" href="./HeaderStyles.css">
+        <link rel="stylesheet" href="./FooterStyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html,body{
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!---------- Header --------->
+       <div class="header">
+            <div class="header_logo">
+                <img src="./logo.jpg" alt="logo">
+            </div>
+            <div class="header_navLinks">
+                <a href="./Project/Project/demo.html">Home</a>
+                <a href="./PlantsModified.html">Plants</a>
+                <a href="./Plant_care/rough.html">PlantCare</a>
+                <a href="./Essentials/project2/essentials.html">Essentials</a>
+                <a href="./NearByNursery/New folder/FinalNewNersery.html">Nearby Nurseries</a>
+                <a href="./Project/Project/demo.html">AI chatbot</a>
+            </div>
+            <div class="Cart_Login">
+                <a href="./Essentials/project2/cart.html"><i class="fa-solid fa-cart-shopping" style="color: #242020; font-size: 20px;"></i></a>
+                <a href="./LoginPage/LoginPage/mainlogin.html" class="Login_option"><i class="fa-solid fa-circle-user" style="color: #252628; font-size: 20px;"></i>
+                    <div class="Login_SignUp">Login</div>
+                </a>
+            </div>
+            <div class="header_side_bars">
+                <div class="header_bars" onclick="Open()">
+                    <i class="fa-solid fa-bars" style="color: #141010;"></i>
+                </div>
+                <div class="header_menu">
+                    <div class="cross" onclick="Close()">&times;</div>
+                    <div class="submenu"><a href="./Project/Project/homepage.html"><i class="fa-solid fa-house" style="color: #242629;"></i>&nbsp;Home</a></div>
+                    <div class="submenu"><a href="./PlantsModified.html"><i class="fa-solid fa-leaf" style="color: #272a2f;"></i>&nbsp;Plants</a></div>
+                    <div class="submenu"><a href="./Plant_care/rough.html"><i class="fa-solid fa-seedling" style="color: #2f343d;"></i>&nbsp;PlantCare</a></div>
+                    <div class="submenu"><a href="./Essentials/project2/essentials.html"><i class="fa-solid fa-mitten" style="color: #343941;"></i>&nbsp;Essentials</a></div>
+                    <div class="submenu"><a href="./NearByNursery/New folder/FinalNewNersery.html"><i class="fa-solid fa-location-dot" style="color: #303640;"></i>&nbsp;Nearby Nurseries</a></div>
+                    <div class="submenu"><a href="./Project/Project/demo.html"><i class="fa-solid fa-robot" style="color: #2e3238;"></i>&nbsp;AI chatbot</a></div>
+                    <div class="submenu"><a href="./Essentials/project2/cart.html"><i class="fa-solid fa-cart-shopping" style="color: #2a2d32;"></i>&nbsp;Cart</a></div>
+                    <div class="submenu"><a href="./LoginPage/LoginPage/mainlogin.html"><i class="fa-solid fa-circle-user" style="color: #343941;"></i>&nbsp;Login/Sign Up</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terrace plants  -->
+         <div class="Indoor_body">
+            <div class="Heading">Vertical Plants</div>
+            <div class="Indoor_grid">
+            <!-- First Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Sweet Pea.webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Sweet Pea</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter to Spring
+                        <br>
+                        Fragrant climbing flowers that add color and charm to balcony trellises and railing baskets.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Sweet_pea" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Nasturtium.jpg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Nasturtium (Trailing/Bushy)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter to Spring
+                        <br>
+                        Edible flowering vine with trailing stems that drape beautifully over balcony railings.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Tropaeolum" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Passion Flower (Passiflora).webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Passion Flower (Passiflora)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                         Climbing ornamental vine with exotic blooms perfect for vertical balcony décor.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Passiflora" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Thunbergia (Black-Eyed Susan Vine).webp" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Thunbergia (Black-Eyed Susan Vine)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Fast climber with orange-yellow blooms ideal for vertical balcony gardening.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Thunbergia_alata" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Climbing Rose.webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Climbing Rose</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter to Spring
+                        <br>
+                        A compact rose variety that grows vertically, offering fragrant blooms with minimal space.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Garden_roses" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Money Plant.webp" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Money Plant (Pothos)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        All Seasons
+                        <br>
+                        A hardy trailing vine with shiny green leaves, great for balcony railings and walls.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Epipremnum_aureum" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Lablab (Hyacinth Bean).jpeg" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Lablab (Hyacinth Bean)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Ornamental climber with purple flowers and pods; grows vertically in warm weather.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Lablab" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Cypress Vine (Star Glory).jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Cypress Vine (Star Glory)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer 
+                        <br>
+                        Feathery foliage with star-shaped blooms; perfect for vertical trellises.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Ipomoea_quamoclit" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Third Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Peas.jpg" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Peas</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter
+                        <br>
+                        Edible vertical grower; needs netting or bamboo poles in balcony sun.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Pea" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Beans.jpg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Beans</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Quick-growing and compact vines; climb up supports in balcony containers.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Green_bean" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Malabar Spinach (Basella).jpeg" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>CMalabar Spinach (Basella)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Edible leafy vine; thrives in heat and climbs gracefully up balcony supports.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Basella_alba" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Climbing Snapdragon (Asarina).webp" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Climbing Snapdragon (Asarina)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Trailing or climbing bloomer; good for pots with vertical wires.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Maurandya_scandens" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Fourth Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Mandevilla.webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Mandevilla</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Vining plant with large tropical blooms; ideal for railing trellises.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Mandevilla" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Balloon Vine (Love in a Puff).jpeg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Balloon Vine (Love in a Puff)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Delicate climber with balloon-like pods; needs support and warmth.
+                    <a href="https://en.wikipedia.org/wiki/Cardiospermum_halicacabum" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Trailing Rosemary.jpg" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Trailing Rosemary</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter to Summer
+                        <br>
+                        Edible herb with cascading stems; great for vertical herb gardens.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Rosemary" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Ivy (English Dwarf).jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Ivy (English Dwarf)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        All year
+                        <br>
+                        Hardy climber; excellent for vertical green walls or balcony fences.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Hedera_helix" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Fifth Row -->
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Vinca (Trailing Variety).jpg" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Vinca (Trailing Variety)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Hardy trailing bloomer; thrives in hot, sunny balconies.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Vinca" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Climbing Jasmine (Dwarf Varieties).webp" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Climbing Jasmine</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                         Fragrant climber; perfect for railing-side trellises on sunny balconies.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Jasmine" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Flame Vine (Pyrostegia).webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Flame Vine (Pyrostegia)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Winter
+                        <br>
+                        Vibrant orange-flowered climber; ideal for railing screens or grilles.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Pyrostegia_venusta" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Trumpet Vine (Dwarf Hybrid).jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Trumpet Vine (Dwarf Hybrid)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Tubular orange-red blooms on compact vines; attracts birds and needs sun.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Campsis_radicans" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Sixth Row -->
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Ivy Gourd (Coccinia grandis).webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3> Ivy Gourd (Coccinia grandis)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Fast-growing edible climber common in Indian kitchens; thrives on balcony trellises.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Coccinia_grandis" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Morning Glory (Ipomoea purpurea).jpg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Morning Glory (Ipomoea purpurea)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Gorgeous fast-growing vine with trumpet-shaped blooms; ideal for morning sun on fences.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Ipomoea_purpurea" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Clematis (Compact Varieties).webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Clematis (Compact Varieties)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Early Summer
+                        <br>
+                        Showy flowers in many colors; needs vertical wires or mesh on balconies.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Clematis" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Hops (Humulus lupulus).jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Hops (Humulus lupulus)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        Vigorous climber with cone-shaped flowers; great for green screens or tall vertical frames.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Humulus_lupulus" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <!-- Seventh Row  -->
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Climbing Hydrangea.webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Climbing Hydrangea</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        Shade-tolerant climber with white blooms; ideal for moist, cooler balconies.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Hydrangea_petiolaris" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Winged Bean (Psophocarpus tetragonolobus).webp" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Winged Bean (Psophocarpus tetragonolobus)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Edible plant producing nutritious pods; climbs well in balcony vegetable setups.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Winged_bean" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Chocolate Vine (Akebia quinata).jpg" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Chocolate Vine (Akebia quinata)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring
+                        <br>
+                        Unique foliage and sweet-scented flowers; perfect for shaded vertical areas.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Akebia_quinata" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden1_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Cypress Vine (Ipomoea quamoclit).jpeg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Cypress Vine (Ipomoea quamoclit)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Fern-like foliage with star-shaped red flowers; a graceful, sun-loving climber.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Ipomoea_quamoclit" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+
+            <!-- Eigth row -->
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Glory Lily (Gloriosa superba).webp" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3> Glory Lily (Gloriosa superba)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer to Monsoon
+                        <br>
+                        Unusual flame-like flowers; climbs using tendrils and thrives in sun to partial shade.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Gloriosa_superba" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Pandorea (Bower Vine).jpg" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Pandorea (Bower Vine)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Summer
+                        <br>
+                        Pretty trumpet-shaped flowers in pinks or whites; ideal for balcony arches and pergolas.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Pandorea_jasminoides" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Blue Pea (Clitoria ternatea).webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Blue Pea (Clitoria ternatea)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Deep blue edible flowers with herbal value; climbs easily on strings or bamboo.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Clitoria_ternatea" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Velvet Bean (Mucuna pruriens).jpg" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Velvet Bean (Mucuna pruriens)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer
+                        <br>
+                        Fast-growing vine with medicinal seeds; grows thickly over vertical frames.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Mucuna_pruriens" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+
+            <!-- Ninth Row  -->
+             <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Star Jasmine (Trachelospermum jasminoides).jpg" alt="Peace Lily">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Star Jasmine (Trachelospermum jasminoides)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Early Summer
+                        <br>
+                        Sweet-scented white blooms; semi-woody climber perfect for railings or fences.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Trachelospermum_jasminoides" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Creeping Fig (Ficus pumila).webp" alt="Zamioculcas zamiifolia">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Creeping Fig (Ficus pumila)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Spring to Monsoon
+                        <br>
+                        A fast-growing climber with small leaves; excellent for covering walls or vertical panels in shaded balconies.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Ficus_pumila" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Virginia Creeper (Parthenocissus quinquefolia).webp" alt="Snake Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Virginia Creeper (Parthenocissus quinquefolia)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Autumn to Winter (foliage turns red)
+                        <br>
+                        Deciduous climber with striking seasonal foliage; climbs easily on balconies or mesh.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Parthenocissus_quinquefolia" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="Plant_card hidden2_content">
+                <div class="Indoor_Plant">
+                    <img src="./Images/Bengal Clock Vine (Thunbergia grandiflora).webp" alt="Spider Plant">
+                </div>
+                <div class="Plant_Matter">
+                    <h3>Bengal Clock Vine (Thunbergia grandiflora)</h3>
+                    <p><b>Season:&nbsp;&nbsp;</b>
+                        Summer to Fall
+                        <br>
+                        Large violet-blue flowers with yellow throats; ideal for draping over balcony railings.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Thunbergia_grandiflora" target="_blank">Wikipedia</a>
+                </div>
+            </div>
+        </div>
+         <div class="load_more_container button1">
+            <span class="ClickButton1" onclick="LoadMore1()">Load More</span>
+        </div>
+        <div class="load_more_container button2">
+            <span class="ClickButton2" onclick="LoadMore2()">Load More</span>
+        </div>
+            
+        </div>
+
+        <div class="leaf leaf1" style="left: 10%;"></div>
+        <div class="leaf leaf2" style="left: 20%;"></div>
+        <div class="leaf leaf3" style="left: 30%;"></div>
+        <div class="leaf leaf4" style="left: 40%;"></div>
+        <div class="leaf leaf5" style="left: 50%;"></div>
+        <div class="leaf leaf6" style="left: 60%;"></div>
+        <div class="leaf leaf7" style="left: 70%;"></div>
+        <div class="leaf leaf8" style="left: 80%;"></div>
+        <div class="leaf leaf9" style="left: 90%;"></div>
+        
+        <footer class="footer">
+           <div class="footer_top">
+                <div class="footer_about">
+                    <h2>EcoVANA</h2>
+                    <p>EcoVANA empowers plant lovers to transform <br>their homes into green spaces with ease and joy. <br>Join the eco-movement today!</p>
+                </div>
+
+                <div class="footer_contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@ecovana.com</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+                </div> 
+                <div class="follow_us">
+                    <h3>Follow Us</h3>
+                    <div class="social_media">
+                        <i class="fa-lg fa-brands fa-instagram"></i>
+                        <i class="fa-lg fa-brands fa-twitter"></i>
+                        <i class="fa-lg fa-brands fa-youtube"></i>
+                        <i class="fa-lg fa-brands fa-facebook"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <hr>
+                <br>
+                <div class="copy_right">
+                    <p>&copy; 2025 EcoVANA. All rights reserved.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made with❤️</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            function LoadMore1(){
+                const hiddenCards = document.querySelectorAll(".hidden1_content");
+                hiddenCards.forEach(card => {
+                    card.style.display = "block";
+                });
+                document.querySelector(".button1").style.display = "none";
+                document.querySelector(".button2").style.display = "flex";
+            }
+
+            function LoadMore2(){
+                const hiddenCards = document.querySelectorAll(".hidden2_content");
+                hiddenCards.forEach(card => {
+                    card.style.display = "block";
+                });
+                document.querySelector(".button2").style.display = "none";
+            }
+            function Open(){
+                document.getElementsByClassName("header_menu")[0].style="right:0px; top:-45px;";
+            }
+            function Close(){
+                document.getElementsByClassName("header_menu")[0].style="right:-250px; top:-45px";
+            }
+        </script>
+    </body>
+</html>
